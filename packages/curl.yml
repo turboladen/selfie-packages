@@ -1,0 +1,10 @@
+---
+name: curl
+version: 0.1.0
+homepage: https://curl.se/
+description:
+
+environments:
+  macos-work:
+    install: echo "Using OS-provided curl"
+    check: command -v curl

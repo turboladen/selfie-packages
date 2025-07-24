@@ -1,0 +1,12 @@
+---
+name: fnm
+version: 0.1.0
+homepage:
+description:
+
+environments:
+  macos-work:
+    install: brew install -v fnm
+    check: command -v fnm && fnm --version
+    dependencies:
+      - homebrew
