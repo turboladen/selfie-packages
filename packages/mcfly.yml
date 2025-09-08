@@ -1,0 +1,16 @@
+---
+name: mcfly
+version: 0.1.0
+homepage: https://github.com/cantino/mcfly
+description: Fly through your shell history. Great Scott!
+
+environments:
+  macos-work:
+    install: brew install mcfly
+    check: command -v mcfly
+    dependencies: []
+  arch-home:
+    install: sudo pacman -S --noconfirm --needed mcfly
+    check: command -v mcfly
+    dependencies: []
+

@@ -1,0 +1,17 @@
+---
+name: lua-language-server
+version: 0.1.0
+homepage: https://github.com/LuaLS/lua-language-server
+description: A language server that offers Lua language support - programmed in Lua
+
+environments:
+  macos-work:
+    install: brew install lua-language-server
+    check: command -v lua-language-server
+    dependencies:
+      - homebrew
+
+  arch-home:
+    install: sudo pacman -S --noconfirm --needed lua-language-server
+    check: command -v lua-language-server
+    dependencies: []

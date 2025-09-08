@@ -1,12 +1,27 @@
 ---
 name: fnm
 version: 0.1.0
-homepage:
-description:
+homepage: https://github.com/Schniz/fnm
+description: 🚀 Fast and simple Node.js version manager, built in Rust
 
 environments:
   macos-work:
-    install: brew install -v fnm
-    check: command -v fnm && fnm --version
+    install: |
+      brew install -v fnm \
+        && echo "fnm env --use-on-cd --shell fish | source" >> ~/.config/fish/conf.d/fnm.fsh
+    check: |
+      command -v fnm \
+        && fnm --version \
+        && cat ~/.config/fish/conf.d/fnm.fish
     dependencies:
       - homebrew
+
+  arch-home:
+    install: |
+      sudo pacman --sync --noconfirm --needed fnm \
+        && echo "fnm env --use-on-cd --shell fish | source" >> ~/.config/fish/conf.d/fnm.fsh
+    check: |
+      command -v fnm \
+        && fnm --version \
+        && cat ~/.config/fish/conf.d/fnm.fish
+    dependencies: []

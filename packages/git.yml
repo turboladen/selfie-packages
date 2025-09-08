@@ -1,0 +1,17 @@
+---
+name: git
+version: 0.1.0
+homepage: https://git-scm.com
+description: |
+  Git is a free and open source distributed version control system designed to
+  handle everything from small to very large projects with speed and efficiency.
+
+environments:
+  macos-work:
+    install: brew install git
+    check: command -v git
+    dependencies: []
+  arch-home:
+    install: sudo pacman -S --noconfirm --needed git
+    check: command -v git
+    dependencies: []

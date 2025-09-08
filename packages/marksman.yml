@@ -1,0 +1,19 @@
+---
+name: marksman
+version: 0.1.0
+homepage: https://github.com/artempyanykh/marksman
+description: |
+  Write Markdown with code assist and intelligence in the comfort of
+  your favourite editor.
+
+environments:
+  macos-work:
+    install: brew install marksman
+    check: command -v marksman
+    dependencies:
+      - homebrew
+
+  arch-home:
+    install: sudo pacman -S --noconfirm --needed marksman
+    check: command -v marksman
+    dependencies: []

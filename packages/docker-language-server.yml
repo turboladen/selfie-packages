@@ -1,0 +1,20 @@
+---
+name: dockerfile-language-server
+version: "0.1.0"
+homepage: https://github.com/rcjsuen/dockerfile-language-server
+description: |
+  A language server for Dockerfiles powered by Node.js, TypeScript,
+  and VSCode technologies.
+
+# Prefer the `npm` method, so as to not have the OS package manager install Node things.
+_default_environment: &default_env
+  install: npm install --global dockerfile-language-server-nodejs
+  check: command -v docker-langserver
+  dependencies:
+    - nodejs
+
+environments:
+  macos-work:
+    <<: *default_env
+  arch-home:
+    <<: *default_env

@@ -1,0 +1,15 @@
+---
+name: bat
+version: 0.1.0
+homepage: https://github.com/sharkdp/bat
+description: A cat(1) clone with wings.
+
+environments:
+  macos-work:
+    install: brew install bat
+    check: command -v bat
+    dependencies: []
+  arch-home:
+    install: sudo pacman -S --noconfirm --needed bat
+    check: command -v bat
+    dependencies: []

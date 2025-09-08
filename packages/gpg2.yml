@@ -1,0 +1,12 @@
+---
+name: gpg2
+version: 0.1.0
+homepage: https://gpupg.org/software/index.html
+description: A cat(1) clone with wings.
+
+environments:
+  macos-work:
+    install: brew install gpg2
+    check: command -v gpg2
+    dependencies:
+      - homebrew

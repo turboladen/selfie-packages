@@ -1,0 +1,13 @@
+---
+name: prosemd-lsp
+version: 0.1.0
+homepage: https://github.com/kitten/prosemd-lsp
+description: An experimental proofreading and linting language server for markdown files.
+
+environments:
+  macos-work:
+    install: cargo binstall --no-confirm prosemd-lsp
+    check: command -v prosemd-lsp
+    dependencies:
+      - cargo-binstall
+
