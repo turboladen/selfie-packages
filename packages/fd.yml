@@ -1,0 +1,17 @@
+---
+name: fd
+version: "0.1.0"
+homepage: https://github.com/sharkdp/fd
+description: A simple, fast and user-friendly alternative to 'find' 
+
+environments:
+  macos-home:
+    install: brew install fd
+    check: command -v fd
+    dependencies:
+      - homebrew
+  macos-work:
+    install: brew install fd
+    check: command -v fd
+    dependencies:
+      - homebrew

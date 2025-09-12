@@ -1,0 +1,17 @@
+---
+name: starship
+version: "0.1.0"
+homepage: https://starship.rs/
+description: The minimal, blazing-fast, and infinitely customizable prompt for any shell!
+
+environments:
+  macos-home:
+    install: brew install starship
+    check: command -v starship
+    dependencies:
+      - homebrew
+  macos-work:
+    install: brew install starship
+    check: command -v starship
+    dependencies:
+      - homebrew

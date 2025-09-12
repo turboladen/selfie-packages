@@ -1,0 +1,15 @@
+---
+name: mssql-tools
+version: 0.1.0
+homepage: https://learn.microsoft.com/en-us/sql/linux/sql-server-linux-setup-tools?view=sql-server-ver17&tabs=redhat-install%2Codbc-ubuntu-1804#install-tools-on-macos
+description: 
+
+environments:
+  macos-work:
+    install: |
+      set -e
+      brew tap microsoft/mssql-release https://github.com/Microsoft/homebrew-mssql-release
+      brew update
+      brew install mssql-tools18
+    check: command -v mcfly
+    dependencies: [homebrew]

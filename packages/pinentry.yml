@@ -7,6 +7,14 @@ description: |
   protocol as specified in the Libassuan manual.
 
 environments:
+  macos-home:
+    install: brew install pinentry pinentry-mac
+    check: |
+      command -v pinentry \
+      && command -v pinentry-mac
+    dependencies:
+      - homebrew
+
   macos-work:
     install: brew install pinentry pinentry-mac
     check: |

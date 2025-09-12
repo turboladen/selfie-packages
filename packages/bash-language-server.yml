@@ -5,7 +5,7 @@ homepage: https://github.com/bash-lsp/bash-language-server
 description: A language server for Bash
 
 _default_environment: &default_env
-  install: npm i -g bash-language-server
+  install: npm install --global bash-language-server
   check: command -v bash-language-server
   dependencies:
     - shellcheck

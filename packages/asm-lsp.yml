@@ -1,0 +1,18 @@
+---
+name: asm-lsp
+version: 0.1.0
+homepage: 
+description: 
+
+_default: &default
+  install: cargo binstall asm-lsp
+  check: command -v asm-lsp
+  dependencies:
+    - cargo-binstall
+
+environments:
+  macos-home:
+    <<: *default
+
+  arch-home:
+    <<: *default

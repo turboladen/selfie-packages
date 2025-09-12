@@ -1,0 +1,18 @@
+---
+name: appcleaner
+version: 0.1.0
+homepage: https://freemacsoft.net/appcleaner/
+description: 
+
+environments:
+  macos-home:
+    install: brew install --cask appcleaner
+    check: brew list --cask appcleaner
+    dependencies:
+      - homebrew
+
+  macos-work:
+    install: HOMEBREW_CASK_OPTS="--appdir=~/Applications" brew install --cask appcleaner
+    check: brew list --cask appcleaner
+    dependencies:
+      - homebrew

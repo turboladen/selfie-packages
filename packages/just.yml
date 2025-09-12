@@ -5,6 +5,12 @@ homepage: https://just.systems
 description: Just a command runner
 
 environments:
+  macos-home:
+    install: brew install just
+    check: command -v just
+    dependencies:
+      - homebrew
+
   macos-work:
     install: brew install just
     check: command -v just

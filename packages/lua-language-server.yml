@@ -5,6 +5,12 @@ homepage: https://github.com/LuaLS/lua-language-server
 description: A language server that offers Lua language support - programmed in Lua
 
 environments:
+  macos-home:
+    install: brew install lua-language-server
+    check: command -v lua-language-server
+    dependencies:
+      - homebrew
+
   macos-work:
     install: brew install lua-language-server
     check: command -v lua-language-server

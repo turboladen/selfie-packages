@@ -1,0 +1,18 @@
+---
+name: yamlfmt
+version: "0.1.0"
+homepage: https://github.com/google/yamlfmt
+description: Extensible command-line tool to format YAML files
+
+environments:
+  macos-home:
+    install: uv tool install yamllint
+    check: command -v yamllint
+    dependencies:
+      - uv
+  macos-work:
+    install: uv tool install yamllint
+    check: command -v yamllint
+    dependencies:
+      - uv
+

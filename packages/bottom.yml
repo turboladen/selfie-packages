@@ -1,0 +1,15 @@
+---
+name: bottom
+version: 0.1.0
+homepage: https://clementtsang.github.io/bottom/stable/
+description: A customizable cross-platform graphical process/system monitor for the terminal
+
+environments:
+  macos-home:
+    install: brew install bottom
+    check: command -v btm
+    dependencies: ["homebrew"]
+  macos-work:
+    install: brew install bottom
+    check: command -v btm
+    dependencies: ["homebrew"]

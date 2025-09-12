@@ -1,0 +1,21 @@
+---
+name: cargo-nextest
+version: 0.1.0
+homepage: 
+description: 
+
+_default: &default
+  install: cargo binstall --no-confirm cargo-nextest
+  check: command -v cargo-nextest
+  dependencies:
+    - cargo-binstall
+
+environments:
+  macos-home:
+    <<: *default
+
+  macos-work:
+    <<: *default
+
+  arch-home:
+    <<: *default

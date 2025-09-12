@@ -1,0 +1,20 @@
+---
+name: gnupg
+version: 0.1.0
+homepage: https://gnupg.org/
+description: |
+  https://alexnorell.com/post/set-up-gpg/
+
+environments:
+  macos-home:
+    install: brew install gnupg
+    check: command -v gpg
+    dependencies:
+      - homebrew
+      - pinentry
+  macos-work:
+    install: brew install gnupg
+    check: command -v gpg
+    dependencies:
+      - homebrew
+      - pinentry

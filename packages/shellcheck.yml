@@ -5,6 +5,12 @@ homepage: https://github.com/koalaman/shellcheck
 description: ShellCheck, a static analysis tool for shell scripts
 
 environments:
+  macos-home:
+    install: brew install -v shellcheck
+    check: command -v shellcheck
+    dependencies:
+      - homebrew
+
   macos-work:
     install: brew install -v shellcheck
     check: command -v shellcheck

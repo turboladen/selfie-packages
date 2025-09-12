@@ -1,0 +1,18 @@
+---
+name: font-symbols-only-nerd-font
+version: 0.1.0
+homepage: 
+description: 
+
+environments:
+  macos-home:
+    install: brew install --cask font-source-symbols-only-nerd-font
+    check: brew list --cask font-symbols-only-nerd-font
+    dependencies:
+      - homebrew
+
+  macos-work:
+    install: HOMEBREW_CASK_OPTS="--appdir=~/Applications" brew install --cask font-symbols-only-nerd-font
+    check: HOMEBREW_CASK_OPTS="--appdir=~/Applications" brew list --cask font-symbols-only-nerd-font
+    dependencies:
+      - homebrew

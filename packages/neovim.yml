@@ -5,6 +5,11 @@ homepage: https://neovim.io
 description: hyperextensible Vim-based text editor
 
 environments:
+  macos-home:
+    install: brew install neovim
+    check: command -v nvim
+    dependencies:
+      - tree-sitter
   macos-work:
     install: brew install neovim
     check: command -v nvim

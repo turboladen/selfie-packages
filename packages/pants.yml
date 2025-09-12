@@ -1,7 +1,0 @@
-name: pants
-version: 0.1.0
-environments:
-  macos-work:
-    install: echo "pants! ${SHELL}"
-    # check: echo "pantsssss"
-    dependencies: []

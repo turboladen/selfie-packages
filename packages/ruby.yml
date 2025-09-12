@@ -1,0 +1,17 @@
+---
+name: ruby
+version: "0.1.0"
+homepage: 
+description: 
+
+environments:
+  macos-work:
+    install: |
+      set -e
+      ruby-install --update
+      ruby-install ruby -- --enable-shared --with-openssl-dir=`brew --prefix openssl@1.1` --no-reinstall
+    check: ls ~/.rubies/ruby-*/bin/ruby >/dev/null 2>&1
+    dependencies:
+      - ruby-install
+      - homebrew
+

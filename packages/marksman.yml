@@ -7,6 +7,12 @@ description: |
   your favourite editor.
 
 environments:
+  macos-home:
+    install: brew install marksman
+    check: command -v marksman
+    dependencies:
+      - homebrew
+
   macos-work:
     install: brew install marksman
     check: command -v marksman

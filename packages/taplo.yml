@@ -1,0 +1,18 @@
+---
+name: taplo
+version: "0.1.0"
+homepage: https://taplo.tamasfe.dev/
+description: A versatile, feature-rich TOML toolkit.
+
+environments:
+  macos-home:
+    install: brew install taplo
+    check: command -v taplo
+    dependencies:
+      - homebrew
+  macos-work:
+    install: brew install taplo
+    check: command -v taplo
+    dependencies:
+      - homebrew
+

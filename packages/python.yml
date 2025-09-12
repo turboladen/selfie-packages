@@ -1,0 +1,13 @@
+---
+name: python
+version: "0.1.0"
+homepage: 
+description: 
+
+environments:
+  macos-work:
+    install: uv python install
+    check: uv python find
+    dependencies:
+      - uv
+

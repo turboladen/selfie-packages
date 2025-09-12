@@ -1,0 +1,12 @@
+---
+name: awscli
+version: "0.1.0"
+homepage: https://aws.amazon.com/cli/
+description: 
+
+environments:
+  macos-work:
+    install: brew install awscli
+    check: command -v aws
+    dependencies:
+      - homebrew

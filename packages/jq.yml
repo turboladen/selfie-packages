@@ -5,6 +5,12 @@ homepage: https://github.com/jqlang/jq
 description: Command-line JSON processor
 
 environments:
+  macos-home:
+    install: brew install jq
+    check: command -v jq
+    dependencies:
+      - homebrew
+
   macos-work:
     install: brew install jq
     check: command -v jq

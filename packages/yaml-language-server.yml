@@ -1,0 +1,18 @@
+---
+name: yaml-language-server
+version: "0.1.0"
+homepage: 
+description: 
+
+environments:
+  macos-home:
+    install: npm -g install yaml-language-server
+    check: command -v yaml-language-server
+    dependencies:
+      - fnm
+  macos-work:
+    install: npm -g install yaml-language-server
+    check: command -v yaml-language-server
+    dependencies:
+      - fnm
+
