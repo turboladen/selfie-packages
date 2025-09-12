@@ -1,0 +1,17 @@
+---
+name: just-lsp
+version: "0.1.0"
+homepage: 
+description: 
+
+_default_environment: &default_env
+  install: cargo binstall --no-confirm just-lsp
+  check: command -v just-lsp
+  dependencies:
+    - cargo-binstall
+
+environments:
+  macos-work:
+    <<: *default_env
+  arch-home:
+    <<: *default_env

@@ -1,0 +1,17 @@
+---
+name: hawkeye
+version: "0.1.0"
+homepage: https://github.com/korandoru/hawkeye/
+description: Simple license header checker and formatter, in multiple distribution forms.
+
+_default_environment: &default_env
+  install: cargo binstall --no-confirm hawkeye
+  check: command -v hawkeye
+  dependencies:
+    - cargo-binstall
+
+environments:
+  macos-work:
+    <<: *default_env
+  arch-home:
+    <<: *default_env
