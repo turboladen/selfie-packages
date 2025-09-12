@@ -6,13 +6,13 @@ description: Extensible command-line tool to format YAML files
 
 environments:
   macos-home:
-    install: uv tool install yamllint
-    check: command -v yamllint
+    install: brew install yamlfmt
+    check: command -v yamlfmt
     dependencies:
-      - uv
+      - homebrew
   macos-work:
-    install: uv tool install yamllint
-    check: command -v yamllint
+    install: uv tool install yamlfmt
+    check: command -v yamlfmt
     dependencies:
-      - uv
+      - homebrew
 

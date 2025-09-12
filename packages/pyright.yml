@@ -1,0 +1,23 @@
+---
+name: pyright
+version: "0.1.0"
+homepage: 
+description: 
+
+environments:
+  macos-home:
+    install: uv tool install pyright
+    check: |
+      set -e
+      command -v pyright
+      command -v pyright-langserver
+    dependencies:
+      - uv
+  macos-work:
+    install: uv tool install pyright
+    check: |
+      set -e
+      command -v pyright
+      command -v pyright-langserver
+    dependencies:
+      - uv

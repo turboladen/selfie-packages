@@ -1,0 +1,17 @@
+---
+name: yamllint
+version: "0.1.0"
+homepage: 
+description: 
+
+environments:
+  macos-home:
+    install: uv tool install yamllint
+    check: command -v yamllint
+    dependencies:
+      - uv
+  macos-work:
+    install: uv tool install yamllint
+    check: command -v yamllint
+    dependencies:
+      - uv
