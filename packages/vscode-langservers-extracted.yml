@@ -1,0 +1,25 @@
+---
+name: vscode-langservers-extracted
+version: "0.1.0"
+homepage: 
+description: 
+
+# Prefer the `npm` method, so as to not have the OS package manager install Node things.
+_default_environment: &default_env
+  install: npm install --global vscode-langservers-extracted
+  check: |
+    set -e
+    command -v vscode-css-language-server
+    command -v vscode-eslint-language-server
+    command -v vscode-html-language-server
+    command -v vscode-json-language-server
+    command -v vscode-markdown-language-server
+  dependencies:
+    - nodejs
+
+environments:
+  macos-work:
+    <<: *default_env
+  arch-home:
+    <<: *default_env
+

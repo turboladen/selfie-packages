@@ -1,13 +1,13 @@
 ---
-name: typescript-language-server
+name: alex
 version: "0.1.0"
-homepage: 
-description: 
+homepage: https://alexjs.com
+description: Catch insensitive, inconsiderate writing
 
 # Prefer the `npm` method, so as to not have the OS package manager install Node things.
 _default_environment: &default_env
-  install: npm install --global typescript-language-server
-  check: command -v typescript-language-server
+  install: npm install --global alex
+  check: command -v alex
   dependencies:
     - nodejs
 
@@ -16,4 +16,3 @@ environments:
     <<: *default_env
   arch-home:
     <<: *default_env
-
