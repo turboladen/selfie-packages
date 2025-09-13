@@ -1,0 +1,12 @@
+---
+name: clang-tidy
+version: "0.1.0"
+homepage: https://clang.llvm.org/extra/clang-tidy/
+description: clang-tidy is a clang-based C++ “linter” tool.
+
+environments:
+  macos-work:
+    install: echo "Install `llvm`" && exit 1
+    check: command -v clang-tidy
+    dependencies:
+      - llvm

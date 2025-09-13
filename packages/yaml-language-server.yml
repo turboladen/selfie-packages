@@ -9,10 +9,10 @@ environments:
     install: npm -g install yaml-language-server
     check: command -v yaml-language-server
     dependencies:
-      - fnm
+      - nodejs
+
   macos-work:
     install: npm -g install yaml-language-server
     check: command -v yaml-language-server
     dependencies:
-      - fnm
-
+      - nodejs

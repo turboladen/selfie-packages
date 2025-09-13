@@ -1,0 +1,12 @@
+---
+name: terraform
+version: "0.1.0"
+homepage: 
+description: 
+
+environments:
+  macos-work:
+    install: tenv terraform install
+    check: command -v terraform
+    dependencies:
+      - tenv
