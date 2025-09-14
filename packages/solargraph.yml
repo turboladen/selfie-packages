@@ -1,0 +1,16 @@
+---
+name: solargraph
+version: 0.1.0
+homepage: 
+description: 
+
+environments:
+  macos-home:
+    install: gem install solargraph
+    check: command -v solargraph
+    dependencies: [ruby]
+
+  macos-work:
+    install: gem install solargraph
+    check: command -v solargraph
+    dependencies: [ruby]

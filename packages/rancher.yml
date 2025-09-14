@@ -1,0 +1,12 @@
+---
+name: rancher
+version: 0.1.0
+homepage: 
+description: 
+
+environments:
+  macos-work:
+    install: HOMEBREW_CASK_OPTS="--appdir=~/Applications" brew install --cask rancher
+    check: HOMEBREW_CASK_OPTS="--appdir=~/Applications" brew list --cask rancher
+    dependencies:
+      - homebrew

@@ -1,0 +1,18 @@
+---
+name: azure-vpn-client
+version: 0.1.0
+homepage: 
+description: 
+
+environments:
+  macos-home:
+    install: mas lucky "Azure VPN Client"
+    check: ls "/Applications/Auzre VPN Client.app/" &> /dev/null
+    dependencies:
+      - mas
+
+  macos-work:
+    install: mas lucky "Azure VPN Client"
+    check: ls "/Applications/Auzre VPN Client.app/" &> /dev/null
+    dependencies:
+      - mas

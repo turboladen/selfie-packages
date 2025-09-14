@@ -1,0 +1,12 @@
+---
+name: betterdisplay
+version: 0.1.0
+homepage: 
+description: 
+
+environments:
+  macos-work:
+    install: HOMEBREW_CASK_OPTS="--appdir=~/Applications" brew install --cask betterdisplay
+    check: HOMEBREW_CASK_OPTS="--appdir=~/Applications" brew list --cask betterdisplay
+    dependencies:
+      - homebrew

@@ -6,13 +6,19 @@ description: Syntax-aware linter for prose
 
 environments:
   macos-home:
-    install: brew install vale
-    check: command -v vale
-    dependencies:
-      - homebrew
-  macos-work:
-    install: brew install vale
+    install: |
+      set -e
+      brew install vale
+      echo "Don't forget to install writing styles (proselint, write-good)"
     check: command -v vale
     dependencies:
       - homebrew
 
+  macos-work:
+    install:
+      set -e
+      brew install vale
+      echo "Don't forget to install writing styles (proselint, write-good)"
+    check: command -v vale
+    dependencies:
+      - homebrew

@@ -10,7 +10,7 @@ environments:
   macos-work:
     install: brew install git
     check: command -v git
-    dependencies: []
+    dependencies: [homebrew]
   arch-home:
     install: sudo pacman -S --noconfirm --needed git
     check: command -v git

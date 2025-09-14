@@ -1,0 +1,18 @@
+---
+name: amphetamine
+version: 0.1.0
+homepage: 
+description: 
+
+environments:
+  macos-home:
+    install: mas lucky Amphetamine
+    check: ls /Applications/Amphetamine.app/ &> /dev/null
+    dependencies:
+      - mas
+
+  macos-work:
+    install: mas lucky Amphetamine
+    check: ls /Applications/Amphetamine.app/ &> /dev/null
+    dependencies:
+      - mas
