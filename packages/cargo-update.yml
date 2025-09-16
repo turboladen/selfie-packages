@@ -1,15 +1,16 @@
 ---
-name: asm-lsp
+name: cargo-update
 version: 0.1.0
 homepage: 
 description: 
 
 _cargo_binstall: &cargo_binstall
-  install: cargo binstall asm-lsp
-  check: command -v asm-lsp
+  install: cargo binstall cargo-update
+  check: cargo update --help &> /dev/null
   dependencies:
     - cargo-binstall
 
 environments:
   macos-home: *cargo_binstall
+  macos-work: *cargo_binstall
   arch-home: *cargo_binstall

@@ -4,15 +4,11 @@ version: 0.1.0
 homepage: 
 description: 
 
-environments:
-  macos-home:
-    install: brew install --cask firefox
-    check: brew list --cask firefox
-    dependencies:
-      - homebrew
+_macos: &macos
+  install: brew install --cask firefox
+  check: ls /Applications/Firefox.app/ &> /dev/null
+  dependencies: [homebrew]
 
-  macos-work:
-    install: HOMEBREW_CASK_OPTS="--appdir=~/Applications" brew install --cask firefox
-    check: HOMEBREW_CASK_OPTS="--appdir=~/Applications" brew list --cask firefox
-    dependencies:
-      - homebrew
+environments:
+  macos-home: *macos
+  macos-work: *macos

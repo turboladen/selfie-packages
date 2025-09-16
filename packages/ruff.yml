@@ -6,14 +6,11 @@ description: |
   An extremely fast Python linter and code formatter, written in Rust.
   NOTE: this also includes what's now the Ruff LSP (`ruff server`).
 
+_uv_tool_install: &uv_tool_install
+  install: uv tool install ruff
+  check: command -v ruff
+  dependencies: [uv]
+
 environments:
-  macos-home:
-    install: uv tool install ruff
-    check: command -v ruff
-    dependencies:
-      - uv
-  macos-work:
-    install: uv tool install ruff
-    check: command -v ruff
-    dependencies:
-      - uv
+  macos-home: *uv_tool_install
+  macos-work: *uv_tool_install

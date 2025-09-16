@@ -1,0 +1,11 @@
+---
+name: slack
+version: 0.1.0
+homepage: 
+description: 
+
+environments:
+  macos-work:
+    install: brew install --cask slack
+    check: ls /Applications/Slack.app/ &> /dev/null
+    dependencies: [homebrew]

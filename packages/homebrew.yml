@@ -3,10 +3,13 @@ name: homebrew
 version: 0.1.0
 homepage: https://brew.sh/
 
+_macos: &macos
+  install: /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+  check: command -v brew
+  dependencies:
+    - bash
+    - curl
+
 environments:
-  macos-work:
-    install: /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-    check: command -v brew
-    dependencies:
-      - bash
-      - curl
+  macos-home: *macos
+  macos-work: *macos

@@ -4,11 +4,14 @@ version: 0.1.0
 homepage: https://github.com/sharkdp/bat
 description: A cat(1) clone with wings.
 
+_macos: &macos
+  install: brew install bat
+  check: command -v bat
+  dependencies: ["homebrew"]
+
 environments:
-  macos-work:
-    install: brew install bat
-    check: command -v bat
-    dependencies: ["homebrew"]
+  macos-home: *macos
+  macos-work: *macos
 
   arch-home:
     install: sudo pacman -S --noconfirm --needed bat

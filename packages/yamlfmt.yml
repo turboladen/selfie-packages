@@ -4,15 +4,11 @@ version: "0.1.0"
 homepage: https://github.com/google/yamlfmt
 description: Extensible command-line tool to format YAML files
 
-environments:
-  macos-home:
-    install: brew install yamlfmt
-    check: command -v yamlfmt
-    dependencies:
-      - homebrew
-  macos-work:
-    install: uv tool install yamlfmt
-    check: command -v yamlfmt
-    dependencies:
-      - homebrew
+_brew: &brew
+  install: brew install yamlfmt
+  check: command -v yamlfmt
+  dependencies: [homebrew]
 
+environments:
+  macos-home: *brew
+  macos-work: *brew

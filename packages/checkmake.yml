@@ -4,8 +4,11 @@ version: 0.1.0
 homepage: https://github.com/checkmake/checkmake
 description: 
 
+_macos: &macos
+  install: brew install checkmake
+  check: command -v checkmake
+  dependencies: ["homebrew"]
+
 environments:
-  macos-work:
-    install: brew install checkmake
-    check: command -v checkmake
-    dependencies: ["homebrew"]
+  macos-home: *macos
+  macos-work: *macos

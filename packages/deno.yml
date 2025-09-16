@@ -4,12 +4,15 @@ version: "0.1.0"
 homepage: https://deno.com
 description: The next generation JavaScript runtime
 
+_macos: &macos
+  install: brew install deno
+  check: command -v deno
+  dependencies:
+    - homebrew
+
 environments:
-  macos-work:
-    install: brew install deno
-    check: command -v deno
-    dependencies:
-      - homebrew
+  macos-home: *macos
+  macos-work: *macos
   arch-home:
     install: sudo pacman --sync --noconfirm --needed deno
     check: command -v deno

@@ -4,21 +4,15 @@ version: 0.1.0
 homepage: https://github.com/sbarex/SourceCodeSyntaxHighlight
 description: Quick Look extension for highlight source code files on macOS 10.15 and later.
 
-environments:
-  macos-home:
-    install: |
-      set -e
-      brew install --cask syntax-highlight
-      echo "TODO: enable the extension: https://github.com/sbarex/SourceCodeSyntaxHighlight?tab=readme-ov-file#enable-the-quick-look-extension"
-    check: brew list --cask syntax-highlight
-    dependencies:
-      - homebrew
+_macos: &macos
+  install: |
+    set -e
+    brew install --cask syntax-highlight
+    echo "TODO: enable the extension: https://github.com/sbarex/SourceCodeSyntaxHighlight?tab=readme-ov-file#enable-the-quick-look-extension"
+  check: brew list --cask syntax-highlight
+  dependencies:
+    - homebrew
 
-  macos-work:
-    install: |
-      set -e
-      HOMEBREW_CASK_OPTS="--appdir=~/Applications" brew install --cask syntax-highlight
-      echo "TODO: enable the extension: https://github.com/sbarex/SourceCodeSyntaxHighlight?tab=readme-ov-file#enable-the-quick-look-extension"
-    check: HOMEBREW_CASK_OPTS="--appdir=~/Applications" brew list --cask sizeup
-    dependencies:
-      - homebrew
+environments:
+  macos-home: *macos
+  macos-work: *macos

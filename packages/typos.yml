@@ -4,14 +4,11 @@ version: 0.1.0
 homepage: https://github.com/crate-ci/typos
 description: Source code spell checker
 
+_brew: &brew
+  install: brew install typos-cli
+  check: command -v typos
+  dependencies: [homebrew]
+
 environments:
-  macos-home:
-    install: brew install typos-cli
-    check: command -v typos
-    dependencies:
-      - homebrew
-  macos-work:
-    install: brew install typos-cli
-    check: command -v typos
-    dependencies:
-      - homebrew
+  macos-home: *brew
+  macos-work: *brew

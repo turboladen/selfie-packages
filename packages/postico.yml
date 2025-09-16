@@ -6,7 +6,6 @@ description:
 
 environments:
   macos-work:
-    install: HOMEBREW_CASK_OPTS="--appdir=~/Applications" brew install --cask postico
-    check: HOMEBREW_CASK_OPTS="--appdir=~/Applications" brew list --cask postico
-    dependencies:
-      - homebrew
+    install: brew install --cask postico
+    check: ls /Applications/Postico*.app &> /dev/null
+    dependencies: [homebrew]

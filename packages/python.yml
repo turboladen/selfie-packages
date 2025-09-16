@@ -4,9 +4,12 @@ version: "0.1.0"
 homepage: 
 description: 
 
+_uv_python_install: &uv_python_install
+  install: uv python install
+  check: uv python find
+  dependencies:
+    - uv
+    
 environments:
-  macos-work:
-    install: uv python install
-    check: uv python find
-    dependencies:
-      - uv
+  macos-home: *uv_python_install
+  macos-work: *uv_python_install

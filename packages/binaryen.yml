@@ -7,5 +7,5 @@ description: Optimizer and compiler/toolchain library for WebAssembly
 environments:
   macos-work:
     install: brew install binaryen
-    check: command -v bat
+    check: command -v wasm-opt
     dependencies: ["homebrew"]

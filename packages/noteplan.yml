@@ -4,15 +4,11 @@ version: 0.1.0
 homepage: 
 description: 
 
-environments:
-  macos-home:
-    install: mas lucky "NotePlan"
-    check: ls "/Applications/Auzre VPN Client.app/" &> /dev/null
-    dependencies:
-      - mas
+_mas_lucky: &mas_lucky
+  install: mas lucky "NotePlan"
+  check: ls "/Applications/NotePlan.app/" &> /dev/null
+  dependencies: [mas]
 
-  macos-work:
-    install: mas lucky "NotePlan"
-    check: ls "/Applications/Auzre VPN Client.app/" &> /dev/null
-    dependencies:
-      - mas
+environments:
+  macos-home: *mas_lucky
+  macos-work: *mas_lucky

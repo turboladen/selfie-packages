@@ -4,12 +4,15 @@ version: "0.1.0"
 homepage: https://github.com/Byron/dua-cli
 description: View disk space usage and delete unwanted data, fast.
 
+_macos: &macos
+  install: brew install dua-cli
+  check: command -v dua
+  dependencies:
+    - homebrew
+
 environments:
-  macos-work:
-    install: brew install dua-cli
-    check: command -v dua
-    dependencies:
-      - homebrew
+  macos-home: *macos
+  macos-work: *macos
   arch-home:
     install: sudo pacman -S --needed --noconfirm dua-cli
     check: command -v dua

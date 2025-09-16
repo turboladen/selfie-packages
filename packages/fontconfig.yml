@@ -1,12 +1,12 @@
 ---
-name: express-vpn
+name: fontconfig
 version: 0.1.0
 homepage: 
 description: 
 
 _macos: &macos
-  install: brew install --cask expressvpn
-  check: brew list --cask expressvpn
+  install: brew install fontconfig
+  check: command -v fc-list
   dependencies: [homebrew]
 
 environments:

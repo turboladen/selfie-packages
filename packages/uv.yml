@@ -4,23 +4,17 @@ version: "0.1.0"
 description: Fast Python package and project manager
 homepage: https://docs.astral.sh/uv/
 
+_mac_curl: &mac_curl
+  install: |
+    curl -LsSf https://astral.sh/uv/install.sh | sh
+    # Source the environment to make uv available immediately
+    source ~/.local/bin/env
+  check: which uv && uv --version
+  dependencies: [curl]
+
 environments:
-  macos-home:
-    install: |
-      curl -LsSf https://astral.sh/uv/install.sh | sh
-      # Source the environment to make uv available immediately
-      source ~/.local/bin/env
-    check: which uv && uv --version
-    dependencies:
-      - curl
-  macos-work:
-    install: |
-      curl -LsSf https://astral.sh/uv/install.sh | sh
-      # Source the environment to make uv available immediately
-      source ~/.local/bin/env
-    check: which uv && uv --version
-    dependencies:
-      - curl
+  macos-home: *mac_curl
+  macos-work: *mac_curl
   arch-home:
     install: |
       # Try pacman first (if available), fallback to installer

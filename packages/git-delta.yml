@@ -4,15 +4,14 @@ version: 0.1.0
 homepage: https://github.com/dandavison/delta
 description: A syntax-highlighting pager for git, diff, and grep output
 
+_macos: &macos
+  install: brew install git-delta
+  check: command -v delta
+  dependencies: [homebrew]
+
 environments:
-  macos-home:
-    install: brew install git-delta
-    check: command -v delta
-    dependencies: ["homebrew"]
-  macos-work:
-    install: brew install git-delta
-    check: command -v delta
-    dependencies: ["homebrew"]
+  macos-home: *macos
+  macos-work: *macos
   arch-home:
     install: sudo pacman -S --noconfirm --needed git-delta
     check: command -v delta

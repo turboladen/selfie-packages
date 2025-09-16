@@ -5,16 +5,13 @@ homepage: https://gnupg.org/
 description: |
   https://alexnorell.com/post/set-up-gpg/
 
+_macos: &macos
+  install: brew install gnupg
+  check: command -v gpg
+  dependencies:
+    - homebrew
+    - pinentry
+
 environments:
-  macos-home:
-    install: brew install gnupg
-    check: command -v gpg
-    dependencies:
-      - homebrew
-      - pinentry
-  macos-work:
-    install: brew install gnupg
-    check: command -v gpg
-    dependencies:
-      - homebrew
-      - pinentry
+  macos-home: *macos
+  macos-work: *macos

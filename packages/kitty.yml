@@ -4,15 +4,11 @@ version: 0.1.0
 homepage: 
 description: 
 
-environments:
-  macos-home:
-    install: brew install --cask kitty
-    check: brew list --cask kitty
-    dependencies:
-      - homebrew
+_brew: &brew
+  install: brew install --cask kitty
+  check: brew list --cask kitty
+  dependencies: [homebrew]
 
-  macos-work:
-    install: HOMEBREW_CASK_OPTS="--appdir=~/Applications" brew install --cask kitty
-    check: HOMEBREW_CASK_OPTS="--appdir=~/Applications" brew list --cask kitty
-    dependencies:
-      - homebrew
+environments:
+  macos-home: *brew
+  macos-work: *brew

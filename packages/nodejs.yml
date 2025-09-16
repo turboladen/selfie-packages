@@ -4,17 +4,18 @@ version: 0.1.0
 homepage:
 description:
 
+_fnm_install: &fnm_install
+  install: |
+    set -e
+    fnm install --lts
+    fnm use lts-latest
+    fnm default lts-latest
+  check: |
+    command -v node && \
+      command -v npm && \
+      npm --version
+  dependencies: [fnm]
+
 environments:
-  macos-work:
-    install: |
-      fnm install --lts
-      fnm use lts-latest
-      fnm default lts-latest
-
-    check: |
-      command -v node && \
-        command -v npm && \
-        npm --version
-
-    dependencies:
-      - fnm
+  macos-home: *fnm_install
+  macos-work: *fnm_install

@@ -4,15 +4,11 @@ version: "0.1.0"
 homepage: 
 description: 
 
-environments:
-  macos-home:
-    install: npm -g install yaml-language-server
-    check: command -v yaml-language-server
-    dependencies:
-      - nodejs
+_npm_install: &npm_install
+  install: npm -g install yaml-language-server
+  check: command -v yaml-language-server
+  dependencies: [nodejs]
 
-  macos-work:
-    install: npm -g install yaml-language-server
-    check: command -v yaml-language-server
-    dependencies:
-      - nodejs
+environments:
+  macos-home: *npm_install
+  macos-work: *npm_install

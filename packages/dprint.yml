@@ -4,14 +4,12 @@ version: 0.1.0
 homepage: https://dprint.dev/
 description: Pluggable and configurable code formatting platform written in Rust
 
+_macos: &macos
+  install: brew install dprint
+  check: command -v dprint
+  dependencies:
+    - homebrew
+
 environments:
-  macos-home:
-    install: brew install dprint
-    check: command -v dprint
-    dependencies:
-      - homebrew
-  macos-work:
-    install: brew install dprint
-    check: command -v dprint
-    dependencies:
-      - homebrew
+  macos-home: *macos
+  macos-work: *macos

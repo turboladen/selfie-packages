@@ -1,14 +1,13 @@
 ---
-name: cargo-nextest
-version: 0.1.0
+name: neocmakelsp
+version: "0.1.0"
 homepage: 
 description: 
 
 _cargo_binstall: &cargo_binstall
-  install: cargo binstall --no-confirm cargo-nextest
-  check: command -v cargo-nextest
-  dependencies:
-    - cargo-binstall
+  install: cargo binstall --no-confirm neocmakelsp
+  check: command -v neocmakelsp
+  dependencies: [cargo-binstall]
 
 environments:
   macos-home: *cargo_binstall

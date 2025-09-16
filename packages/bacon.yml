@@ -4,11 +4,13 @@ version: 0.1.0
 homepage: https://dystroy.org/bacon
 description: bacon is a background rust code checker.
 
+_macos: &macos
+  install: brew install bacon
+  check: command -v bacon
+  dependencies: ["homebrew"]
+
 environments:
-  macos-work:
-    install: brew install bacon
-    check: command -v bacon
-    dependencies: ["homebrew"]
+  macos-work: *macos
 
   arch-home:
     install: sudo pacman --sync --noconfirm --needed bacon

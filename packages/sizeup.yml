@@ -4,15 +4,11 @@ version: 0.1.0
 homepage: 
 description: 
 
-environments:
-  macos-home:
-    install: brew install --cask sizeup
-    check: brew list --cask sizeup
-    dependencies:
-      - homebrew
+_brew: &brew
+  install: brew install --cask sizeup
+  check: brew list --cask sizeup
+  dependencies: [homebrew]
 
-  macos-work:
-    install: HOMEBREW_CASK_OPTS="--appdir=~/Applications" brew install --cask sizeup
-    check: HOMEBREW_CASK_OPTS="--appdir=~/Applications" brew list --cask sizeup
-    dependencies:
-      - homebrew
+environments:
+  macos-home: *brew
+  macos-work: *brew

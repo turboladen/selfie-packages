@@ -5,14 +5,12 @@ homepage: https://alexjs.com
 description: Catch insensitive, inconsiderate writing
 
 # Prefer the `npm` method, so as to not have the OS package manager install Node things.
-_default_environment: &default_env
+_npm: &npm
   install: npm install --global alex
   check: command -v alex
   dependencies:
     - nodejs
 
 environments:
-  macos-work:
-    <<: *default_env
-  arch-home:
-    <<: *default_env
+  macos-work: *npm
+  arch-home: *npm

@@ -6,7 +6,7 @@ description:
 
 environments:
   macos-work:
-    install: HOMEBREW_CASK_OPTS="--appdir=~/Applications" brew install --cask gcloud-cli
-    check: HOMEBREW_CASK_OPTS="--appdir=~/Applications" brew list --cask gcloud-cli
+    install: brew install --cask gcloud-cli
+    check: brew list --cask gcloud-cli
     dependencies:
       - homebrew

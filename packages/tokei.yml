@@ -4,14 +4,11 @@ version: "0.1.0"
 homepage: https://github.com/XAMPPRocky/tokei
 description: Program that allows you to count code, quickly
 
+_brew: &brew
+  install: brew install tokei
+  check: command -v tokei
+  dependencies: [homebrew]
+    
 environments:
-  macos-home:
-    install: brew install tokei
-    check: command -v tokei
-    dependencies:
-      - homebrew
-  macos-work:
-    install: brew install tokei
-    check: command -v tokei
-    dependencies:
-      - homebrew
+  macos-home: *brew
+  macos-work: *brew

@@ -1,12 +1,12 @@
 ---
-name: orbstack
-version: 0.1.0
+name: procs
+version: "0.1.0"
 homepage: 
 description: 
 
 _brew: &brew
-  install: brew install --cask orbstack
-  check: ls /Applications/OrbStack*.app/ &> /dev/null
+  install: brew install procs
+  check: command -v procs
   dependencies: [homebrew]
 
 environments:

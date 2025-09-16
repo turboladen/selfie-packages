@@ -5,14 +5,13 @@ homepage:
 description: 
 
 # Prefer the `npm` method, so as to not have the OS package manager install Node things.
-_default_environment: &default_env
+_npm_install: &npm_install
   install: npm install --global eslint
   check: command -v eslint
   dependencies:
     - nodejs
 
 environments:
-  macos-work:
-    <<: *default_env
-  arch-home:
-    <<: *default_env
+  macos-home: *npm_install
+  macos-work: *npm_install
+  arch-home: *npm_install

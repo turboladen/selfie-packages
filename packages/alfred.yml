@@ -1,12 +1,12 @@
 ---
-name: claude
+name: alfred
 version: 0.1.0
 homepage: 
 description: 
 
 _macos: &macos
-  install: brew install --cask claude
-  check: brew list --cask claude
+  install: brew install --cask alfred
+  check: ls /Applications/Alfred*.app/ &> /dev/null
   dependencies:
     - homebrew
 

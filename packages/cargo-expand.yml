@@ -4,18 +4,13 @@ version: 0.1.0
 homepage: 
 description: 
 
-_default: &default
+_cargo_binstall: &cargo_binstall
   install: cargo binstall --no-confirm cargo-expand
   check: command -v cargo-expand
   dependencies:
     - cargo-binstall
 
 environments:
-  macos-home:
-    <<: *default
-
-  macos-work:
-    <<: *default
-
-  arch-home:
-    <<: *default
+  macos-home: *cargo_binstall
+  macos-work: *cargo_binstall
+  arch-home: *cargo_binstall

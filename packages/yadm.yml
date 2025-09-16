@@ -4,15 +4,11 @@ version: "0.1.0"
 homepage: 
 description: 
 
-environments:
-  macos-home:
-    install: brew install yadm
-    check: command -v yadm
-    dependencies:
-      - homebrew
-  macos-work:
-    install: brew install yadm
-    check: command -v yadm
-    dependencies:
-      - homebrew
+_brew: &brew
+  install: brew install yadm
+  check: command -v yadm
+  dependencies: [homebrew]
 
+environments:
+  macos-home: *brew
+  macos-work: *brew

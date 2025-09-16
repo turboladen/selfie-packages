@@ -4,14 +4,12 @@ version: "0.1.0"
 homepage: 
 description: 
 
-_default_environment: &default_env
+_cargo_binstall: &cargo_binstall
   install: cargo binstall --no-confirm just-lsp
   check: command -v just-lsp
-  dependencies:
-    - cargo-binstall
+  dependencies: [cargo-binstall]
 
 environments:
-  macos-work:
-    <<: *default_env
-  arch-home:
-    <<: *default_env
+  macos-home: *cargo_binstall
+  macos-work: *cargo_binstall
+  arch-home: *cargo_binstall

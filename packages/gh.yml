@@ -4,12 +4,14 @@ version: "0.1.0"
 homepage: https://cli.github.com
 description: GitHub CLI brings GitHub to your terminal.
 
+_macos: &macos
+  install: brew install gh
+  check: command -v gh
+  dependencies: [homebrew]
+
 environments:
-  macos-work:
-    install: brew install gh
-    check: command -v gh
-    dependencies:
-      - homebrew
+  macos-home: *macos
+  macos-work: *macos
 
   arch-home:
     install: sudo pacman -S --noconfirm --needed github-cli

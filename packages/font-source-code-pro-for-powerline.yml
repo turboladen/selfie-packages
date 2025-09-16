@@ -4,15 +4,14 @@ version: 0.1.0
 homepage: 
 description: 
 
-environments:
-  macos-home:
-    install: brew install --cask font-source-code-pro-for-powerline
-    check: brew list --cask font-source-code-pro-for-powerline
-    dependencies:
-      - homebrew
+_macos: &macos
+  install: brew install --cask font-source-code-pro-for-powerline
+  check: |
+    sh -c "fc-list : family | grep 'Source Code Pro for Powerline'"
+  dependencies:
+    - homebrew
+    - fontconfig
 
-  macos-work:
-    install: HOMEBREW_CASK_OPTS="--appdir=~/Applications" brew install --cask font-source-code-pro-for-powerline
-    check: HOMEBREW_CASK_OPTS="--appdir=~/Applications" brew list --cask font-source-code-pro-for-powerline
-    dependencies:
-      - homebrew
+environments:
+  macos-home: *macos
+  macos-work: *macos

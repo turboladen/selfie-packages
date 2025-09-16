@@ -5,7 +5,7 @@ homepage:
 description: 
 
 # Prefer the `npm` method, so as to not have the OS package manager install Node things.
-_default_environment: &default_env
+_npm_install: &npm_install
   install: npm install --global vscode-langservers-extracted
   check: |
     set -e
@@ -18,8 +18,6 @@ _default_environment: &default_env
     - nodejs
 
 environments:
-  macos-work:
-    <<: *default_env
-  arch-home:
-    <<: *default_env
-
+  macos-home: *npm_install
+  macos-work: *npm_install
+  arch-home: *npm_install

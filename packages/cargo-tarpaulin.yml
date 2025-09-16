@@ -4,14 +4,13 @@ version: "0.1.0"
 homepage: 
 description: 
 
-_default_environment: &default_env
+_cargo_binstall: &cargo_binstall
   install: cargo binstall --no-confirm cargo-tarpaulin
   check: command -v cargo-tarpaulin
   dependencies:
     - cargo-binstall
 
 environments:
-  macos-work:
-    <<: *default_env
-  arch-home:
-    <<: *default_env
+  macos-home: *cargo_binstall
+  macos-work: *cargo_binstall
+  arch-home: *cargo_binstall

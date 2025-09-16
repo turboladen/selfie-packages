@@ -6,7 +6,6 @@ description:
 
 environments:
   macos-work:
-    install: HOMEBREW_CASK_OPTS="--appdir=~/Applications" brew install --cask tunnelblick
-    check: HOMEBREW_CASK_OPTS="--appdir=~/Applications" brew list --cask tunnelblick
-    dependencies:
-      - homebrew
+    install: brew install --cask tunnelblick
+    check: ls /Applications/Tunnelblick.app &> /dev/null
+    dependencies: [homebrew]

@@ -6,7 +6,6 @@ description:
 
 environments:
   macos-work:
-    install: HOMEBREW_CASK_OPTS="--appdir=~/Applications" brew install --cask rancher
-    check: HOMEBREW_CASK_OPTS="--appdir=~/Applications" brew list --cask rancher
-    dependencies:
-      - homebrew
+    install: brew install --cask rancher
+    check: brew list --cask rancher
+    dependencies: [homebrew]

@@ -4,15 +4,11 @@ version: 0.1.0
 homepage: 
 description: 
 
-environments:
-  macos-home:
-    install: brew install --cask onyx
-    check: brew list --cask onyx
-    dependencies:
-      - homebrew
+_brew: &brew
+  install: brew install --cask onyx
+  check: ls /Applications/OnyX*.app/ &> /dev/null
+  dependencies: [homebrew]
 
-  macos-work:
-    install: HOMEBREW_CASK_OPTS="--appdir=~/Applications" brew install --cask onyx
-    check: HOMEBREW_CASK_OPTS="--appdir=~/Applications" brew list --cask onyx
-    dependencies:
-      - homebrew
+environments:
+  macos-home: *brew
+  macos-work: *brew
