@@ -1,0 +1,15 @@
+---
+name: pdm
+version: "0.1.0"
+homepage: 
+description: 
+
+_uv_tool_install: &uv_tool_install
+  install: uv tool install pdm
+  check: command -v pdm
+  dependencies: [uv]
+
+environments:
+  macos-home: *uv_tool_install
+  macos-work: *uv_tool_install
+
