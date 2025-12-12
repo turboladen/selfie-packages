@@ -5,8 +5,14 @@ homepage: https://github.com/ajeetdsouza/zoxide
 description: Shell extension to navigate your filesystem faster
 
 _brew: &brew
-  install: brew install zoxide
-  check: command -v zoxide
+  install: |
+    set -e
+    brew install zoxide
+    echo "zoxide init fish | source" >> ~/.config/fish/conf.d/zoxide.fish
+  check: |
+    set -e
+    command -v zoxide
+    ls ~/.config/fish/conf.d/zoxide.fish &> /dev/null
   dependencies: [homebrew]
 
 environments:

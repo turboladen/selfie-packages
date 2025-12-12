@@ -6,12 +6,15 @@ description: 🚀 Fast and simple Node.js version manager, built in Rust
 
 _macos: &macos
   install: |
-    brew install -v fnm \
-      && echo "fnm env --use-on-cd --shell fish | source" >> ~/.config/fish/conf.d/fnm.fsh
+    set -e
+    brew install -v fnm
+    echo "fnm env --use-on-cd --shell fish | source" >> ~/.config/fish/conf.d/fnm.fish
+    echo "fnm completions --shell fish | source" >> ~/.config/fish/completions/fnm.fish
   check: |
-    command -v fnm \
-      && fnm --version \
-      && cat ~/.config/fish/conf.d/fnm.f*sh
+    set -e
+    command -v fnm
+    fnm --version
+    ls ~/.config/fish/conf.d/fnm.fish &> /dev/null
   dependencies:
     - homebrew
 
@@ -21,10 +24,13 @@ environments:
 
   arch-home:
     install: |
+      set -e
       sudo pacman --sync --noconfirm --needed fnm \
-        && echo "fnm env --use-on-cd --shell fish | source" >> ~/.config/fish/conf.d/fnm.fsh
+      echo "fnm env --use-on-cd --shell fish | source" >> ~/.config/fish/conf.d/fnm.fish
+      echo "fnm completions --shell fish | source" >> ~/.config/fish/completions/fnm.fish
     check: |
-      command -v fnm \
-        && fnm --version \
-        && cat ~/.config/fish/conf.d/fnm.fish
+      set -e
+      command -v fnm
+      fnm --version
+      ls ~/.config/fish/conf.d/fnm.fish &> /dev/null
     dependencies: []

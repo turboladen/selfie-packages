@@ -6,7 +6,10 @@ description: Define your dev environment as code. For microservice apps on Kuber
 
 environments:
   macos-work:
-    install: brew install tilt
+    install: |
+      set -e
+      brew install tilt
+      echo "tilt completion fish | source" >> ~/.config/fish/completions/tilt.fish
     check: command -v tilt
     dependencies:
       - homebrew
