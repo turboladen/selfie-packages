@@ -6,6 +6,6 @@ description:
 
 environments:
   macos-work:
-    install: brew install --cask postico
+    install: brew install --cask postico@1
     check: ls /Applications/Postico*.app &> /dev/null
     dependencies: [homebrew]
