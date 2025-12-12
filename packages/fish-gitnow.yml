@@ -1,0 +1,15 @@
+---
+name: fish-gitnow
+version: 0.1.0
+homepage: 
+description: 
+
+_fisher: &fisher
+  install: fish -c "fisher install joseluisq/gitnow"
+  check: ls ~/.config/fish/conf.d/gitnow.fish &> /dev/null
+  dependencies:
+    - fish-fisher
+
+environments:
+  macos-home: *fisher
+  macos-work: *fisher

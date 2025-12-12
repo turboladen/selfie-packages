@@ -1,0 +1,15 @@
+---
+name: buildifier
+version: "0.1.0"
+homepage: 
+description: 
+
+_macos: &macos
+  install: brew install buildifier
+  check: command -v buildifier
+  dependencies:
+    - homebrew
+
+environments:
+  macos-home: *macos
+  macos-work: *macos
