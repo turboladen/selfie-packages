@@ -1,8 +1,8 @@
 ---
 name: firefox
 version: 0.1.0
-homepage: 
-description: 
+homepage: https://www.firefox.com
+description: Free and open source web browser
 
 _macos: &macos
   install: brew install --cask firefox

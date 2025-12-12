@@ -1,8 +1,10 @@
 ---
 name: terraform
 version: "0.1.0"
-homepage: 
-description: 
+homepage: https://developer.hashicorp.com/terraform
+description: |
+  Terraform is an infrastructure as code tool that lets you build, change, and
+  version infrastructure safely and efficiently.
 
 environments:
   macos-work:

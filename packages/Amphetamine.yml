@@ -1,8 +1,8 @@
 ---
 name: amphetamine
 version: 0.1.0
-homepage: 
-description: 
+homepage: https://apps.apple.com/us/app/amphetamine/id937984704?mt=12
+description: Poweful keep-awak utility
 
 _macos: &macos
   install: mas lucky Amphetamine

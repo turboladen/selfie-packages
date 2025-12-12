@@ -1,8 +1,8 @@
 ---
 name: lemminx
 version: "0.1.0"
-homepage:
-description:
+homepage: https://github.com/eclipse-lemminx/lemminx
+description: XML Language Server
 
 _macos: &macos
   install: |

@@ -6,6 +6,7 @@ homepage: https://docs.astral.sh/uv/
 
 _mac_curl: &mac_curl
   install: |
+    set -e
     curl -LsSf https://astral.sh/uv/install.sh | sh
     # Source the environment to make uv available immediately
     source ~/.local/bin/env
@@ -17,6 +18,8 @@ environments:
   macos-work: *mac_curl
   arch-home:
     install: |
+      set -e
+
       # Try pacman first (if available), fallback to installer
       if pacman -Qi uv &>/dev/null || sudo pacman -S uv; then
         echo "Installed uv via pacman"

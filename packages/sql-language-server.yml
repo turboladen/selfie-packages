@@ -1,8 +1,8 @@
 ---
 name: sql-language-server
 version: "0.1.0"
-homepage: 
-description: 
+homepage: https://github.com/joe-re/sql-language-server
+description: SQL Language Server
 
 _bun_install: &bun_install
   install: bun -g install sql-language-server

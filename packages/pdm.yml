@@ -1,8 +1,9 @@
 ---
 name: pdm
 version: "0.1.0"
-homepage: 
-description: 
+homepage: https://pdm-project.org
+description: |
+  (Python Development Master) is a modern package and dependency manager.
 
 _uv_tool_install: &uv_tool_install
   install: uv tool install pdm
@@ -10,6 +11,4 @@ _uv_tool_install: &uv_tool_install
   dependencies: [uv]
 
 environments:
-  macos-home: *uv_tool_install
   macos-work: *uv_tool_install
-

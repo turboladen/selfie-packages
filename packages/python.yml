@@ -1,8 +1,7 @@
 ---
 name: python
 version: "0.1.0"
-homepage: 
-description: 
+homepage: https://python.org
 
 _uv_python_install: &uv_python_install
   install: uv python install

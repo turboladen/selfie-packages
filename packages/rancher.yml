@@ -1,8 +1,8 @@
 ---
 name: rancher
 version: 0.1.0
-homepage: 
-description: 
+homepage: https://rancherdesktop.io
+description: Container Management and Kubernetes on the Desktop
 
 environments:
   macos-work:

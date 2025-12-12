@@ -1,8 +1,8 @@
 ---
 name: buildifier
 version: "0.1.0"
-homepage: 
-description: 
+homepage: https://github.com/bazelbuild/buildtools
+description: Format bazel BUILD files with a standard convention
 
 _macos: &macos
   install: brew install buildifier

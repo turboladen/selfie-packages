@@ -1,8 +1,8 @@
 ---
 name: fontconfig
 version: 0.1.0
-homepage: 
-description: 
+homepage: https://wiki.freedesktop.org/www/Software/fontconfig/
+description: XML-based font configuration API for X Windows
 
 _macos: &macos
   install: brew install fontconfig

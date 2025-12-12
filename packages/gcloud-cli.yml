@@ -1,8 +1,8 @@
 ---
 name: gcloud-cli
 version: 0.1.0
-homepage: 
-description: 
+homepage: https://cloud.google.com/cli/
+description: Google Cloud Command Line Interface (gcloud CLI)
 
 environments:
   macos-work:

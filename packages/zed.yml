@@ -1,8 +1,8 @@
 ---
 name: zed
 version: 0.1.0
-homepage: 
-description: 
+homepage: https://zed.dev
+description: Zed is a minimal code editor crafted for speed and collaboration with humans and AI.
 
 _macos: &macos
   install: brew install --cask zed

@@ -1,8 +1,8 @@
 ---
 name: kitty
 version: 0.1.0
-homepage: 
-description: 
+homepage: https://github.com/kovidgoyal/kitty
+description: If you live in the terminal, kitty is made for you! Cross-platform, fast, feature-rich, GPU based.
 
 _brew: &brew
   install: brew install --cask kitty

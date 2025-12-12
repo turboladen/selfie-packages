@@ -1,8 +1,8 @@
 ---
 name: sizeup
 version: 0.1.0
-homepage: 
-description: 
+homepage: https://www.irradiatedsoftware.com/sizeup/
+description: Powerful, keyboard-centric window management
 
 _brew: &brew
   install: brew install --cask sizeup

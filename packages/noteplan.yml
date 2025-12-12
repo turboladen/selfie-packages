@@ -1,8 +1,10 @@
 ---
 name: noteplan
 version: 0.1.0
-homepage: 
-description: 
+homepage: https://noteplan.co
+description: |
+  NotePlan allows professionals around the world to keep track of their
+  jam-packed schedules and focus on their tasks rather than on managing them.
 
 _mas_lucky: &mas_lucky
   install: mas lucky "NotePlan"

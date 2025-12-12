@@ -1,8 +1,10 @@
 ---
 name: github-desktop
 version: 0.1.0
-homepage: 
-description: 
+homepage: https://github.com/apps/desktop
+description: |
+  The ultimate GUI Git client for streamlining and enhancing your local code
+  management process
 
 _macos: &macos
   install: brew install --cask github

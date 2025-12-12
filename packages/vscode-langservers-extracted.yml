@@ -1,8 +1,8 @@
 ---
 name: vscode-langservers-extracted
 version: "0.1.0"
-homepage: 
-description: 
+homepage: https://github.com/hrsh7th/vscode-langservers-extracted
+description: vscode-langservers bin collection. 
 
 # Prefer the `npm` method, so as to not have the OS package manager install Node things.
 _npm_install: &npm_install

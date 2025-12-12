@@ -1,8 +1,8 @@
 ---
 name: cargo-nextest
 version: 0.1.0
-homepage: 
-description: 
+homepage: https://github.com/nextest-rs/nextest
+description: A next-generation test runner for Rust
 
 _cargo_binstall: &cargo_binstall
   install: cargo binstall --no-confirm cargo-nextest

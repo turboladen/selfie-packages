@@ -1,8 +1,8 @@
 ---
 name: yaml-language-server
 version: "0.1.0"
-homepage: 
-description: 
+homepage: https://github.com/redhat-developer/yaml-language-server
+description: Language Server for YAML files
 
 _npm_install: &npm_install
   install: npm -g install yaml-language-server

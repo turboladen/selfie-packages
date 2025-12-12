@@ -1,8 +1,8 @@
 ---
 name: paw
 version: 0.1.0
-homepage: 
-description: 
+homepage: https://paw.cloud
+description:  The most advanced API tool for Mac. (Now called RapidAPI)
 
 environments:
   macos-work:

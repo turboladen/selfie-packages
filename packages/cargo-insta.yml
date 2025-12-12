@@ -1,8 +1,8 @@
 ---
 name: cargo-insta
 version: 0.1.0
-homepage: 
-description: 
+homepage: https://github.com/mitsuhiko/insta
+description: A snapshot library for rust
 
 _cargo_binstall: &cargo_binstall
   install: cargo binstall --no-confirm cargo-insta

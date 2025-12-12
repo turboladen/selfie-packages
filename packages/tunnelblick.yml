@@ -1,8 +1,8 @@
 ---
 name: tunnelblick
 version: 0.1.0
-homepage: 
-description: 
+homepage: https://www.tunnelblick.net/
+description: Free and open-source OpenVPN client
 
 environments:
   macos-work:

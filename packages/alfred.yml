@@ -1,8 +1,10 @@
 ---
 name: alfred
 version: 0.1.0
-homepage: 
-description: 
+homepage: https://www.alfredapp.com
+description: |
+  Alfred is a productivity application for macOS, which boosts your efficiency
+  with hotkeys, keywords and text expansion.
 
 _macos: &macos
   install: brew install --cask alfred

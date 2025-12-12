@@ -1,8 +1,8 @@
 ---
 name: slack
 version: 0.1.0
-homepage: 
-description: 
+homepage: https://slack.com
+description: Slack is a collaboration plaform that connects teams and tools.
 
 environments:
   macos-work:

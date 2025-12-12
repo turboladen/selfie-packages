@@ -1,8 +1,7 @@
 ---
 name: nodejs
 version: 0.1.0
-homepage:
-description:
+homepage: https://nodejs.org
 
 _fnm_install: &fnm_install
   install: |

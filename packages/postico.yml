@@ -1,8 +1,8 @@
 ---
 name: postico
 version: 0.1.0
-homepage: 
-description: 
+homepage: https://eggerapps.at/postico/v1.php
+description: A Modern PostgreSQL Client for the Mac
 
 environments:
   macos-work:

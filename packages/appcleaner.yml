@@ -2,7 +2,7 @@
 name: appcleaner
 version: 0.1.0
 homepage: https://freemacsoft.net/appcleaner/
-description: 
+description: AppCleaner is a small application which allows you to thoroughly uninstall unwanted apps.
 
 _macos: &macos
   install: brew install --cask appcleaner

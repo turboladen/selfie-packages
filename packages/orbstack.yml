@@ -1,8 +1,10 @@
 ---
 name: orbstack
 version: 0.1.0
-homepage: 
-description: 
+homepage: https://orbstack.dev/
+description: |
+  OrbStack is the fast, light, and easy way to run Docker containers and Linux.
+  Develop at lightspeed with our Docker Desktop alternative.
 
 _brew: &brew
   install: brew install --cask orbstack
@@ -11,4 +13,3 @@ _brew: &brew
 
 environments:
   macos-home: *brew
-  macos-work: *brew

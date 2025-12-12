@@ -1,8 +1,8 @@
 ---
 name: yamllint
 version: "0.1.0"
-homepage: 
-description: 
+homepage: https://github.com/adrienverge/yamllint
+description: A linter for YAML files. 
 
 _uv_tool_install: &uv_tool_install
   install: uv tool install yamllint

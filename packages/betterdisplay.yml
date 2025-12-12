@@ -1,8 +1,11 @@
 ---
 name: betterdisplay
 version: 0.1.0
-homepage: 
-description: 
+homepage: https://github.com/waydabber/BetterDisplay
+description: |
+  Unlock your displays on your Mac! Flexible HiDPI scaling, XDR/HDR extra
+  brightness, virtual screens, DDC control, extra dimming, PIP/streaming,
+  EDID override and lots more!
 
 environments:
   macos-work:

@@ -1,8 +1,8 @@
 ---
 name: solargraph
 version: 0.1.0
-homepage: 
-description: 
+homepage: https://solargraph.org
+description: solargraph is a Ruby gem that provides intellisense features through MS's LSP.
 
 _gem: &gem
   install: |

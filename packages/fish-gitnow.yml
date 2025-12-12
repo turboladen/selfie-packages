@@ -1,8 +1,8 @@
 ---
 name: fish-gitnow
 version: 0.1.0
-homepage: 
-description: 
+homepage: https://github.com/joseluisq/gitnow
+description: Speed up your Git workflow
 
 _fisher: &fisher
   install: fish -c "fisher install joseluisq/gitnow"

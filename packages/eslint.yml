@@ -1,8 +1,8 @@
 ---
 name: eslint
 version: "0.1.0"
-homepage: 
-description: 
+homepage: https://eslint.org/
+description: Find and fix problems in your JavaScript code
 
 # Prefer the `npm` method, so as to not have the OS package manager install Node things.
 _npm_install: &npm_install

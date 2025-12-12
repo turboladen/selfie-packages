@@ -1,8 +1,7 @@
 ---
 name: ruby
 version: "0.1.0"
-homepage: 
-description: 
+homepage: https://ruby-lang.org
 
 _ruby_install: &ruby_install
   install: |

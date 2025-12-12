@@ -13,5 +13,6 @@ _cargo_binstall: &cargo_binstall
     - rust
 
 environments:
+  macos-home: *cargo_binstall
   macos-work: *cargo_binstall
   arch-home: *cargo_binstall

@@ -9,6 +9,7 @@ _brew: &brew
   check: command -v fisher
   dependencies:
     - homebrew
+    - fish
 
 environments:
   macos-home: *brew

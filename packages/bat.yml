@@ -2,7 +2,11 @@
 name: bat
 version: 0.1.0
 homepage: https://github.com/sharkdp/bat
-description: A cat(1) clone with wings.
+description: |
+  A cat(1) clone with wings.
+
+  Note: I install using the OS package manager instead of `cargo` so as to not have
+  to deal with man pages and shell completions and all that.
 
 _macos: &macos
   install: brew install bat

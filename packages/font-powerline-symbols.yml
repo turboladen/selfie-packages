@@ -1,8 +1,8 @@
 ---
 name: font-powerline-symbols
 version: 0.1.0
-homepage: 
-description: 
+homepage: https://github.com/powerline/powerline
+description: Powerline Symbols
 
 _macos: &macos
   install: brew install --cask font-powerline-symbols

@@ -1,8 +1,8 @@
 ---
 name: font-source-code-pro-for-powerline
 version: 0.1.0
-homepage: 
-description: 
+homepage: https://github.com/powerline/fonts/tree/master/SourceCodePro
+description: Source Code Pro for Powerline
 
 _macos: &macos
   install: brew install --cask font-source-code-pro-for-powerline

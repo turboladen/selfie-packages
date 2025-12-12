@@ -14,5 +14,6 @@ _npm: &npm
     - nodejs
 
 environments:
+  macos-home: *npm
   macos-work: *npm
   arch-home: *npm

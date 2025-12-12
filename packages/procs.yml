@@ -1,8 +1,8 @@
 ---
 name: procs
 version: "0.1.0"
-homepage: 
-description: 
+homepage: https://github.com/dalance/procs
+description: A modern replacement for ps writen in Rust
 
 _brew: &brew
   install: brew install procs
