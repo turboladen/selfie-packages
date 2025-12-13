@@ -1,0 +1,14 @@
+---
+name: htmlhint
+version: "0.1.0"
+homepage: https://github.com/htmlhint/HTMLHint
+description: The static code analysis tool you need for your HTML
+
+_npm_install: &npm_install
+  install: npm -g install htmlhint
+  check: command -v htmlhint
+  dependencies: [nodejs]
+
+environments:
+  macos-home: *npm_install
+  macos-work: *npm_install

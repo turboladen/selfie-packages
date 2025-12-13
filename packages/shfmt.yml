@@ -1,0 +1,14 @@
+---
+name: shfmt
+version: 0.1.0
+homepage: https://github.com/patrickvane/shfmt
+description: A shell formatter (sh/bash/mksh)
+
+_brew: &brew
+  install: brew install -v shfmt
+  check: command -v shfmt
+  dependencies: [homebrew]
+
+environments:
+  macos-home: *brew
+  macos-work: *brew

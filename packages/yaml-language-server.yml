@@ -1,0 +1,14 @@
+---
+name: yaml-language-server
+version: "0.1.0"
+homepage: https://github.com/redhat-developer/yaml-language-server
+description: Language Server for YAML files
+
+_npm_install: &npm_install
+  install: npm -g install yaml-language-server
+  check: command -v yaml-language-server
+  dependencies: [nodejs]
+
+environments:
+  macos-home: *npm_install
+  macos-work: *npm_install

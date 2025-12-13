@@ -4,14 +4,28 @@ version: "0.1.0"
 homepage: https://github.com/junegunn/fzf
 description: 🌸 A command-line fuzzy finder
 
+_check: &check |
+  set -e
+  command -v fzf
+  ls ~/.config/fish/conf.d/fzf.fish
+
+_macos: &macos
+  install: |
+    set -e
+    brew install fzf
+    echo "fzf --fish | source" >> ~/.config/fish/conf.d/fzf.fish
+  check: *check
+  dependencies:
+    - homebrew
+
 environments:
-  macos-work:
-    install: brew install fzf
-    check: command -v fzf
-    dependencies:
-      - homebrew
+  macos-home: *macos
+  macos-work: *macos
 
   arch-home:
-    install: sudo pacman -S --noconfirm --needed fzf
-    check: command -v fzf
+    install: |
+      set -e
+      sudo pacman -S --noconfirm --needed fzf
+      echo "fzf --fish | source" >> ~/.config/fish/conf.d/fzf.fish
+    check: *check
     dependencies: []

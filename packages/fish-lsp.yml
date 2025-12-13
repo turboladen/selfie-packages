@@ -1,0 +1,14 @@
+---
+name: fish-lsp
+version: "0.1.0"
+homepage: https://www.fish-lsp.dev/
+description: fish-lsp is a language server protocol (LSP) implementation for the fish shell.
+
+_macos: &macos
+  install: brew install fish-lsp
+  check: command -v fish-lsp
+  dependencies: [homebrew]
+
+environments:
+  macos-home: *macos
+  macos-work: *macos

@@ -1,0 +1,16 @@
+---
+name: ruff
+version: "0.1.0"
+homepage: https://docs.astral.sh/ruff/
+description: |
+  An extremely fast Python linter and code formatter, written in Rust.
+  NOTE: this also includes what's now the Ruff LSP (`ruff server`).
+
+_uv_tool_install: &uv_tool_install
+  install: uv tool install ruff
+  check: command -v ruff
+  dependencies: [uv]
+
+environments:
+  macos-home: *uv_tool_install
+  macos-work: *uv_tool_install

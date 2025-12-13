@@ -1,0 +1,17 @@
+---
+name: font-victor-mono-nerd-font
+version: 0.1.0
+homepage: https://github.com/ryanoasis/nerd-fonts
+description: VictorMono Nerd Font (Victor Mono)
+
+_macos: &macos
+  install: brew install --cask font-victor-mono-nerd-font
+  check: |
+    sh -c "fc-list : family | grep 'VictorMono Nerd Font'"
+  dependencies:
+    - homebrew
+    - fontconfig
+
+environments:
+  macos-home: *macos
+  macos-work: *macos

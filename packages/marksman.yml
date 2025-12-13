@@ -6,12 +6,15 @@ description: |
   Write Markdown with code assist and intelligence in the comfort of
   your favourite editor.
 
+_brew: &brew
+  install: brew install marksman
+  check: command -v marksman
+  dependencies:
+    - homebrew
+
 environments:
-  macos-work:
-    install: brew install marksman
-    check: command -v marksman
-    dependencies:
-      - homebrew
+  macos-home: *brew
+  macos-work: *brew
 
   arch-home:
     install: sudo pacman -S --noconfirm --needed marksman

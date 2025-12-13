@@ -1,0 +1,21 @@
+---
+name: bun
+version: 0.1.0
+homepage: https://bun.sh/
+description: |
+  Bun is a fast, incrementally adoptable all-in-one JavaScript, TypeScript &
+  JSX toolkit. Use individual tools like bun test or bun install in Node.js
+  projects, or adopt the complete stack with a fast JavaScript runtime,
+  bundler, test runner, and package manager built in. Bun aims for 100% Node.js
+  compatibility.
+
+_curl_install: &curl_install
+  install: curl -fsSL https://bun.sh/install | bash
+  check: |
+    command -v bun && \
+      bun --version
+  dependencies: [curl]
+
+environments:
+  macos-home: *curl_install
+  macos-work: *curl_install

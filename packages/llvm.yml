@@ -1,0 +1,14 @@
+---
+name: llvm
+version: 0.1.0
+homepage: https://llvm.org/
+description: The LLVM Project is a collection of modular and reusable compiler and toolchain technologies.
+
+_brew: &brew
+  install: brew install llvm
+  check: command -v llvm-config
+  dependencies: [homebrew]
+
+environments:
+  macos-home: *brew
+  macos-work: *brew

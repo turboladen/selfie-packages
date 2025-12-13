@@ -4,10 +4,13 @@ version: 0.1.0
 homepage: https://curl.se/
 description: command line tool and library for transferring data with URLs (since 1998)
 
+_macos: &macos
+  install: echo "(Using OS-provided curl)"
+  check: command -v curl
+
 environments:
-  macos-work:
-    install: echo "Using OS-provided curl"
-    check: command -v curl
+  macos-home: *macos
+  macos-work: *macos
   arch-home:
     install: sudo pacman --sync --noconfirm --needed curl
     check: command -v curl

@@ -4,13 +4,27 @@ version: 0.1.0
 homepage: https://github.com/cantino/mcfly
 description: Fly through your shell history. Great Scott!
 
-environments:
-  macos-work:
-    install: brew install mcfly
-    check: command -v mcfly
-    dependencies: []
-  arch-home:
-    install: sudo pacman -S --noconfirm --needed mcfly
-    check: command -v mcfly
-    dependencies: []
+_brew: &brew
+  install: |
+    set -e
+    brew install mcfly
+    echo "mcfly init fish | source" >> ~/.config/fish/conf.d/mcfly.fish
+  check: |
+    set -e
+    command -v mcfly
+    ls ~/.config/fish/conf.d/mcfly.fish &> /dev/null
+  dependencies: [homebrew]
 
+environments:
+  macos-home: *brew
+  macos-work: *brew
+  arch-home:
+    install: |
+      set -e
+      sudo pacman -S --noconfirm --needed mcfly
+      echo "mcfly init fish | source" >> ~/.config/fish/conf.d/mcfly.fish
+    check: |
+      set -e
+      command -v mcfly
+      ls ~/.config/fish/conf.d/mcfly.fish &> /dev/null
+    dependencies: []

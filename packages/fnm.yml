@@ -4,24 +4,33 @@ version: 0.1.0
 homepage: https://github.com/Schniz/fnm
 description: 🚀 Fast and simple Node.js version manager, built in Rust
 
+_macos: &macos
+  install: |
+    set -e
+    brew install -v fnm
+    echo "fnm env --use-on-cd --shell fish | source" >> ~/.config/fish/conf.d/fnm.fish
+    echo "fnm completions --shell fish | source" >> ~/.config/fish/completions/fnm.fish
+  check: |
+    set -e
+    command -v fnm
+    fnm --version
+    ls ~/.config/fish/conf.d/fnm.fish &> /dev/null
+  dependencies:
+    - homebrew
+
 environments:
-  macos-work:
-    install: |
-      brew install -v fnm \
-        && echo "fnm env --use-on-cd --shell fish | source" >> ~/.config/fish/conf.d/fnm.fsh
-    check: |
-      command -v fnm \
-        && fnm --version \
-        && cat ~/.config/fish/conf.d/fnm.fish
-    dependencies:
-      - homebrew
+  macos-home: *macos
+  macos-work: *macos
 
   arch-home:
     install: |
+      set -e
       sudo pacman --sync --noconfirm --needed fnm \
-        && echo "fnm env --use-on-cd --shell fish | source" >> ~/.config/fish/conf.d/fnm.fsh
+      echo "fnm env --use-on-cd --shell fish | source" >> ~/.config/fish/conf.d/fnm.fish
+      echo "fnm completions --shell fish | source" >> ~/.config/fish/completions/fnm.fish
     check: |
-      command -v fnm \
-        && fnm --version \
-        && cat ~/.config/fish/conf.d/fnm.fish
+      set -e
+      command -v fnm
+      fnm --version
+      ls ~/.config/fish/conf.d/fnm.fish &> /dev/null
     dependencies: []

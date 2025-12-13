@@ -4,14 +4,12 @@ version: "0.1.0"
 homepage: https://github.com/regen100/cmake-language-server
 description: CMake LSP Implementation
 
-_default_environment: &default_env
+_uv: &uv
   install: uv tool install cmake-language-server
   check: command -v cmake-language-server
-  dependencies:
-    - uv
+  dependencies: [uv]
 
 environments:
-  macos-work:
-    <<: *default_env
-  arch-home:
-    <<: *default_env
+  macos-home: *uv
+  macos-work: *uv
+  arch-home: *uv

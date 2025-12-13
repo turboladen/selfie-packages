@@ -6,12 +6,14 @@ description: |
   clang-format is located in clang/tools/clang-format and can be used to format
   C/C++/Java/JavaScript/JSON/Objective-C/Protobuf/C# code.
 
+_macos: &macos
+  install: echo "(Installed via llvm)"
+  check: command -v clang-format
+  dependencies: [llvm]
+
 environments:
-  macos-work:
-    install: brew install llvm
-    check: command -v clang-format
-    dependencies:
-      - homebrew
+  macos-home: *macos
+  macos-work: *macos
   arch-home:
     install: sudo pacman --sync --noconfirm --needed clang
     check: command -v clang-format

@@ -1,0 +1,14 @@
+---
+name: topgrade
+version: "0.1.0"
+homepage: https://github.com/topgrade-rs/topgrade
+description: Upgrade all the things
+
+_brew: &brew
+  install: brew install topgrade
+  check: command -v topgrade
+  dependencies: [homebrew]
+
+environments:
+  macos-home: *brew
+  macos-work: *brew

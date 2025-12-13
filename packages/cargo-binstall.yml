@@ -4,7 +4,7 @@ version: "0.1.0"
 homepage: https://github.com/cargo-bins/cargo-binstall
 description: Binary installation for rust projects
 
-_default_environment: &default_env
+_cargo_binstall: &cargo_binstall
   install: |
     curl -L --proto '=https' --tlsv1.2 -sSf https://raw.githubusercontent.com/cargo-bins/cargo-binstall/main/install-from-binstall-release.sh | bash
   check: command -v cargo-binstall
@@ -13,7 +13,6 @@ _default_environment: &default_env
     - rust
 
 environments:
-  macos-work:
-    <<: *default_env
-  arch-home:
-    <<: *default_env
+  macos-home: *cargo_binstall
+  macos-work: *cargo_binstall
+  arch-home: *cargo_binstall

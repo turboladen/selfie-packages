@@ -4,12 +4,14 @@ version: "0.1.0"
 homepage: https://github.com/eza-community/eza
 description: A modern, maintained replacement for ls
 
+_macos: &macos
+  install: brew install eza
+  check: command -v eza
+  dependencies: [homebrew]
+
 environments:
-  macos-work:
-    install: brew install eza
-    check: command -v eza
-    dependencies:
-      - homebrew
+  macos-home: *macos
+  macos-work: *macos
   arch-home:
     install: sudo pacman -S --noconfirm --needed eza
     check: command -v eza

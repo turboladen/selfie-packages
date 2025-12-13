@@ -6,12 +6,14 @@ description: |
   a collection of PIN or passphrase entry dialogs which utilize the Assuan
   protocol as specified in the Libassuan manual.
 
-environments:
-  macos-work:
-    install: brew install pinentry pinentry-mac
-    check: |
-      command -v pinentry \
-      && command -v pinentry-mac
-    dependencies:
-      - homebrew
+_brew: &brew
+  install: brew install pinentry pinentry-mac
+  check: |
+    command -v pinentry \
+    && command -v pinentry-mac
+  dependencies:
+    - homebrew
 
+environments:
+  macos-home: *brew
+  macos-work: *brew

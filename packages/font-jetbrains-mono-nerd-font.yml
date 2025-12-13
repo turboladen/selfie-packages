@@ -1,0 +1,17 @@
+---
+name: font-jetbrains-mono-nerd-font
+version: 0.1.0
+homepage: https://github.com/ryanoasis/nerd-fonts
+description: JetBrainsMono Nerd Font families (JetBrains Mono)
+
+_macos: &macos
+  install: brew install --cask font-jetbrains-mono-nerd-font
+  check: |
+    sh -c "fc-list : family | grep 'JetBrainsMono' | grep 'Nerd Font'"
+  dependencies:
+    - homebrew
+    - fontconfig
+
+environments:
+  macos-home: *macos
+  macos-work: *macos

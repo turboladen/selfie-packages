@@ -1,0 +1,14 @@
+---
+name: sql-language-server
+version: "0.1.0"
+homepage: https://github.com/joe-re/sql-language-server
+description: SQL Language Server
+
+_bun_install: &bun_install
+  install: bun -g install sql-language-server
+  check: command -v sql-language-server
+  dependencies: [bun]
+
+environments:
+  macos-home: *bun_install
+  macos-work: *bun_install
