@@ -2,7 +2,7 @@
 name: typescript-language-server
 version: "0.1.0"
 homepage: https://github.com/typescript-language-server/typescript-language-server
-description: TypeScript & JavaScript Language Server 
+description: TypeScript & JavaScript Language Server
 
 # Prefer the `npm` method, so as to not have the OS package manager install Node things.
 _npm_install: &npm_install

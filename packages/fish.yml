@@ -2,7 +2,7 @@
 name: fish
 version: "0.1.0"
 homepage: https://fishshell.com/
-description: fish is a smart and user-friendly command line shell for Linux, macOS, and the rest of the family. 
+description: fish is a smart and user-friendly command line shell for Linux, macOS, and the rest of the family.
 
 _macos: &macos
   install: |

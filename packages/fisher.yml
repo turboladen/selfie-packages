@@ -10,8 +10,8 @@ _macos: &macos
     curl -sL https://raw.githubusercontent.com/jorgebucaran/fisher/main/functions/fisher.fish | source && fisher install jorgebucaran/fisher
   check: command -v fisher
   dependencies:
-  - curl
-  - fish
+    - curl
+    - fish
 
 environments:
   macos-home: *macos

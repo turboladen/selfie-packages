@@ -9,7 +9,6 @@ _check: &check |
   command -v fzf
   ls ~/.config/fish/conf.d/fzf.fish
 
-
 _macos: &macos
   install: |
     set -e

@@ -8,7 +8,7 @@ _uv_python_install: &uv_python_install
   check: uv python find
   dependencies:
     - uv
-    
+
 environments:
   macos-home: *uv_python_install
   macos-work: *uv_python_install

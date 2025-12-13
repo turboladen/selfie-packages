@@ -2,7 +2,7 @@
 name: ruby-install
 version: "0.1.0"
 homepage: https://github.com/postmodern/ruby-install
-description: Installs Ruby, JRuby, TruffleRuby, or mruby 
+description: Installs Ruby, JRuby, TruffleRuby, or mruby
 
 _brew: &brew
   install: brew install ruby-install

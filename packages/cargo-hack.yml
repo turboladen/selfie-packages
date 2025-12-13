@@ -2,7 +2,7 @@
 name: cargo-hack
 version: 0.1.0
 homepage: https://github.com/taiki-e/cargo-hack
-description: Cargo subcommand to provide various options useful for testing and continuous integration. 
+description: Cargo subcommand to provide various options useful for testing and continuous integration.
 
 _cargo_binstall: &cargo_binstall
   install: cargo binstall --no-confirm cargo-hack

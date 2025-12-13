@@ -2,7 +2,7 @@
 name: stylua
 version: "0.1.0"
 homepage: https://github.com/JohnnyMorganz/StyLua
-description: A Lua code formatter 
+description: A Lua code formatter
 
 _brew: &brew
   install: brew install stylua

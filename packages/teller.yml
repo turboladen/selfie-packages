@@ -11,4 +11,3 @@ environments:
     check: command -v teller
     dependencies:
       - homebrew
-

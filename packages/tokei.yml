@@ -8,7 +8,7 @@ _brew: &brew
   install: brew install tokei
   check: command -v tokei
   dependencies: [homebrew]
-    
+
 environments:
   macos-home: *brew
   macos-work: *brew

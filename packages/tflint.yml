@@ -10,4 +10,3 @@ environments:
     check: command -v tflint
     dependencies:
       - homebrew
-
