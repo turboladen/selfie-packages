@@ -4,13 +4,13 @@ version: 0.1.0
 homepage: https://github.com/bash-lsp/bash-language-server
 description: A language server for Bash
 
-_npm: &npm
-  install: npm install --global bash-language-server
+_bun: &bun
+  install: bun install --global bash-language-server
   check: command -v bash-language-server
   dependencies:
     - shellcheck
-    - nodejs
+    - bun
 
 environments:
-  macos-work: *npm
-  arch-home: *npm
+  macos-work: *bun
+  arch-home: *bun

@@ -4,14 +4,13 @@ version: "0.1.0"
 homepage: https://eslint.org/
 description: Find and fix problems in your JavaScript code
 
-# Prefer the `npm` method, so as to not have the OS package manager install Node things.
-_npm_install: &npm_install
-  install: npm install --global eslint
+_bun_install: &bun_install
+  install: bun install --global eslint
   check: command -v eslint
   dependencies:
-    - nodejs
+    - bun
 
 environments:
-  macos-home: *npm_install
-  macos-work: *npm_install
-  arch-home: *npm_install
+  macos-home: *bun_install
+  macos-work: *bun_install
+  arch-home: *bun_install

@@ -2,6 +2,7 @@
 name: nodejs
 version: 0.1.0
 homepage: https://nodejs.org
+# NOTE: Kept for reference - using bun instead for JavaScript/TypeScript tooling
 
 _fnm_install: &fnm_install
   install: |
@@ -15,6 +16,6 @@ _fnm_install: &fnm_install
       npm --version
   dependencies: [fnm]
 
-environments:
-  macos-home: *fnm_install
-  macos-work: *fnm_install
+environments: {}
+# macos-home: *fnm_install
+# macos-work: *fnm_install

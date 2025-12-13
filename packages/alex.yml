@@ -4,13 +4,12 @@ version: "0.1.0"
 homepage: https://alexjs.com
 description: Catch insensitive, inconsiderate writing
 
-# Prefer the `npm` method, so as to not have the OS package manager install Node things.
-_npm: &npm
-  install: npm install --global alex
+_bun: &bun
+  install: bun install --global alex
   check: command -v alex
   dependencies:
-    - nodejs
+    - bun
 
 environments:
-  macos-work: *npm
-  arch-home: *npm
+  macos-work: *bun
+  arch-home: *bun
