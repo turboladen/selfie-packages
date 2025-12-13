@@ -4,13 +4,12 @@ version: "0.1.0"
 homepage: https://github.com/typescript-language-server/typescript-language-server
 description: TypeScript & JavaScript Language Server
 
-# Prefer the `npm` method, so as to not have the OS package manager install Node things.
-_npm_install: &npm_install
-  install: npm install --global typescript-language-server
+_bun_install: &bun_install
+  install: bun install --global typescript-language-server
   check: command -v typescript-language-server
-  dependencies: [nodejs]
+  dependencies: [bun]
 
 environments:
-  macos-home: *npm_install
-  macos-work: *npm_install
-  arch-home: *npm_install
+  macos-home: *bun_install
+  macos-work: *bun_install
+  arch-home: *bun_install

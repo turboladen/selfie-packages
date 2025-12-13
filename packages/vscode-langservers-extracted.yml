@@ -4,9 +4,8 @@ version: "0.1.0"
 homepage: https://github.com/hrsh7th/vscode-langservers-extracted
 description: vscode-langservers bin collection.
 
-# Prefer the `npm` method, so as to not have the OS package manager install Node things.
-_npm_install: &npm_install
-  install: npm install --global vscode-langservers-extracted
+_bun_install: &bun_install
+  install: bun install --global vscode-langservers-extracted
   check: |
     set -e
     command -v vscode-css-language-server
@@ -15,9 +14,9 @@ _npm_install: &npm_install
     command -v vscode-json-language-server
     command -v vscode-markdown-language-server
   dependencies:
-    - nodejs
+    - bun
 
 environments:
-  macos-home: *npm_install
-  macos-work: *npm_install
-  arch-home: *npm_install
+  macos-home: *bun_install
+  macos-work: *bun_install
+  arch-home: *bun_install

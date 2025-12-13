@@ -5,7 +5,7 @@ homepage: https://github.com/joe-re/sql-language-server
 description: SQL Language Server
 
 _bun_install: &bun_install
-  install: bun -g install sql-language-server
+  install: bun install --global sql-language-server
   check: command -v sql-language-server
   dependencies: [bun]
 
