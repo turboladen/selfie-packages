@@ -1,0 +1,13 @@
+---
+name: lua
+version: 0.1.0
+homepage: https://www.lua.org/
+
+_brew: &brew
+  install: brew install lua
+  check: command -v lua
+  dependencies: [homebrew]
+
+environments:
+  macos-home: *brew
+  macos-work: *brew
