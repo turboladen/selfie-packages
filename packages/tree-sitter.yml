@@ -1,14 +1,15 @@
----
 name: tree-sitter
-version: "0.1.0"
+version: 0.1.0
 homepage: https://tree-sitter.github.io/
 description: Incremental parsing library
-
-_brew: &brew
-  install: brew install tree-sitter
-  check: brew list --versions tree-sitter
-  dependencies: [homebrew]
-
 environments:
-  macos-home: *brew
-  macos-work: *brew
+  macos-work:
+    install: brew install tree-sitter
+    check: command -v tree-sitter
+    dependencies:
+    - homebrew
+  macos-home:
+    install: brew install tree-sitter
+    check: command -v tree-sitter
+    dependencies:
+    - homebrew

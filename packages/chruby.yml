@@ -1,26 +1,29 @@
----
 name: chruby
-version: "0.1.0"
+version: 0.1.0
 homepage: https://github.com/postmodern/chruby
 description: Changes the current Ruby
-
-_macos: &macos
-  install: brew install chruby chruby-fish
-  check: |
-    set -e
-    type --type chruby
-    ls ~/.config/fish/completions/chruby.fish &> /dev/null
-  dependencies: [homebrew]
-
 environments:
-  macos-home: *macos
-  macos-work: *macos
-
   arch-home:
     install: paru --sync --noconfirm --needed chruby chruby-fish
     check: |
       set -e
       type --type chruby
-      ll ~/.config/fish/completions/chruby.fish &> /dev/null
+      ls ~/.config/fish/completions/chruby.fish &> /dev/null
     dependencies:
-      - paru
+    - paru
+  macos-home:
+    install: brew install chruby chruby-fish
+    check: |
+      set -e
+      type --type chruby
+      ls ~/.config/fish/completions/chruby.fish &> /dev/null
+    dependencies:
+    - homebrew
+  macos-work:
+    install: brew install chruby chruby-fish
+    check: |
+      set -e
+      type --type chruby
+      ls ~/.config/fish/completions/chruby.fish &> /dev/null
+    dependencies:
+    - homebrew

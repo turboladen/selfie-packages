@@ -1,4 +1,3 @@
----
 name: bun
 version: 0.1.0
 homepage: https://bun.sh/
@@ -8,15 +7,14 @@ description: |
   projects, or adopt the complete stack with a fast JavaScript runtime,
   bundler, test runner, and package manager built in. Bun aims for 100% Node.js
   compatibility.
-
-_curl_install: &curl_install
-  install:
-    curl -fsSL https://bun.sh/install | bash
-  check: |
-    command -v bun && \
-      bun --version
-  dependencies: [curl]
-
 environments:
-  macos-home: *curl_install
-  macos-work: *curl_install
+  macos-work:
+    install: curl -fsSL https://bun.sh/install | bash
+    check: command -v bun
+    dependencies:
+    - curl
+  macos-home:
+    install: curl -fsSL https://bun.sh/install | bash
+    check: command -v bun
+    dependencies:
+    - curl
