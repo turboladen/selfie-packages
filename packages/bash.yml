@@ -1,7 +1,12 @@
 name: bash
 version: 0.1.0
 homepage: https://www.gnu.org/software/bash/
+
 environments:
+  macos-home:
+    install: echo "Using OS-provided bash"
+    check: command -v bash
+    dependencies: []
   macos-work:
     install: echo "Using OS-provided bash"
     check: command -v bash
