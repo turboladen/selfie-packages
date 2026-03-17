@@ -1,18 +1,22 @@
----
 name: cargo-audit
 version: 0.1.0
 homepage: https://github.com/rustsec/rustsec/tree/main/cargo-audit
 description: |
   Audit your dependencies for crates with security vulnerabilities reported to
   the RustSec Advisory Database.
-
-_cargo_binstall: &cargo_binstall
-  install: cargo binstall cargo-audit
-  check: command -v cargo-audit
-  dependencies:
-    - cargo-binstall
-
 environments:
-  macos-home: *cargo_binstall
-  macos-work: *cargo_binstall
-  arch-home: *cargo_binstall
+  macos-home:
+    install: cargo binstall --no-confirm cargo-audit
+    check: command -v cargo-audit
+    dependencies:
+    - cargo-binstall
+  arch-home:
+    install: cargo binstall --no-confirm cargo-audit
+    check: command -v cargo-audit
+    dependencies:
+    - cargo-binstall
+  macos-work:
+    install: cargo binstall --no-confirm cargo-audit
+    check: command -v cargo-audit
+    dependencies:
+    - cargo-binstall

@@ -3,10 +3,34 @@ version: 0.1.0
 homepage: https://github.com/Schniz/fnm
 description: 🚀 Fast and simple Node.js version manager, built in Rust
 environments:
+  macos-home:
+    install: |
+      set -e
+      brew install fnm
+      echo "fnm env --use-on-cd --shell fish | source" >> ~/.config/fish/conf.d/fnm.fish
+      echo "fnm completions --shell fish | source" >> ~/.config/fish/completions/fnm.fish
+    check: |
+      set -e
+      command -v fnm
+      ls ~/.config/fish/conf.d/fnm.fish &> /dev/null
+    dependencies:
+    - homebrew
+  macos-work:
+    install: |
+      set -e
+      brew install fnm
+      echo "fnm env --use-on-cd --shell fish | source" >> ~/.config/fish/conf.d/fnm.fish
+      echo "fnm completions --shell fish | source" >> ~/.config/fish/completions/fnm.fish
+    check: |
+      set -e
+      command -v fnm
+      ls ~/.config/fish/conf.d/fnm.fish &> /dev/null
+    dependencies:
+    - homebrew
   arch-home:
     install: |
       set -e
-      sudo pacman --sync --noconfirm --needed fnm \
+      sudo pacman -S --noconfirm --needed fnm
       echo "fnm env --use-on-cd --shell fish | source" >> ~/.config/fish/conf.d/fnm.fish
       echo "fnm completions --shell fish | source" >> ~/.config/fish/completions/fnm.fish
     check: |
@@ -14,27 +38,3 @@ environments:
       command -v fnm
       ls ~/.config/fish/conf.d/fnm.fish &> /dev/null
     dependencies: []
-  macos-work:
-    install: |
-      set -e
-      brew install -v fnm
-      echo "fnm env --use-on-cd --shell fish | source" >> ~/.config/fish/conf.d/fnm.fish
-      echo "fnm completions --shell fish | source" >> ~/.config/fish/completions/fnm.fish
-    check: |
-      set -e
-      command -v fnm
-      ls ~/.config/fish/conf.d/fnm.fish &> /dev/null
-    dependencies:
-    - homebrew
-  macos-home:
-    install: |
-      set -e
-      brew install -v fnm
-      echo "fnm env --use-on-cd --shell fish | source" >> ~/.config/fish/conf.d/fnm.fish
-      echo "fnm completions --shell fish | source" >> ~/.config/fish/completions/fnm.fish
-    check: |
-      set -e
-      command -v fnm
-      ls ~/.config/fish/conf.d/fnm.fish &> /dev/null
-    dependencies:
-    - homebrew

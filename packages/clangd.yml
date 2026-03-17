@@ -1,21 +1,21 @@
----
 name: clangd
-version: "0.1.0"
+version: 0.1.0
 homepage: https://clangd.llvm.org
 description: |
   clangd understands your C++ code and adds smart features to your editor: code completion,
   compile errors, go-to-definition and more.
-
-_macos: &macos
-  install: echo "(Installed via llvm)"
-  check: command -v clangd
-  dependencies:
-    - llvm
-
 environments:
-  macos-home: *macos
-  macos-work: *macos
+  macos-home:
+    install: echo "(Installed via llvm)"
+    check: command -v clangd
+    dependencies:
+    - llvm
   arch-home:
-    install: sudo pacman --sync --noconfirm --needed clang
+    install: sudo pacman -S --noconfirm --needed clang
     check: command -v clangd
     dependencies: []
+  macos-work:
+    install: echo "(Installed via llvm)"
+    check: command -v clangd
+    dependencies:
+    - llvm

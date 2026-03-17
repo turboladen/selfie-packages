@@ -3,65 +3,6 @@ version: 0.1.0
 homepage: https://github.com/eclipse-lemminx/lemminx
 description: XML Language Server
 environments:
-  macos-home:
-    install: |
-      set -e
-
-      # Get the latest release info
-      LATEST_URL=$(curl -s https://api.github.com/repos/redhat-developer/vscode-xml/releases/latest | grep "browser_download_url.*lemminx-osx-aarch_64\.zip" | cut -d '"' -f 4)
-
-      if [ -z "$LATEST_URL" ]; then
-        echo "Error: Could not find lemminx-osx-aarch_64.zip in latest release"
-        exit 1
-      fi
-
-      echo "Downloading lemminx from: $LATEST_URL"
-
-      # Create temp directory
-      TEMP_DIR=$(mktemp -d)
-      cd "$TEMP_DIR"
-
-      # Download the zip file
-      curl -L -o lemminx.zip "$LATEST_URL"
-
-      # Extract the zip file
-      unzip lemminx.zip
-
-      # Find the lemminx binary (it should be named lemminx-osx-aarch_64 after extraction)
-      if [ -f lemminx-osx-aarch_64 ]; then
-        BINARY_PATH="lemminx-osx-aarch_64"
-      elif [ -f lemminx ]; then
-        BINARY_PATH="lemminx"
-      elif [ -f */lemminx ]; then
-        BINARY_PATH="*/lemminx"
-      else
-        echo "Error: Could not find lemminx binary in downloaded zip"
-        ls -la
-        exit 1
-      fi
-
-      # Make it executable
-      chmod +x "$BINARY_PATH"
-
-      # Install to /usr/local/bin (or ~/bin if no sudo) with the name 'lemminx'
-      if [ -w /usr/local/bin ]; then
-        cp "$BINARY_PATH" /usr/local/bin/lemminx
-        echo "Installed lemminx to /usr/local/bin/lemminx"
-      else
-        mkdir -p "$HOME/bin"
-        cp "$BINARY_PATH" "$HOME/bin/lemminx"
-        echo "Installed lemminx to $HOME/bin/lemminx"
-        echo "Make sure $HOME/bin is in your PATH"
-      fi
-
-      # Cleanup
-      cd /
-      rm -rf "$TEMP_DIR"
-
-      echo "LemMinX installation complete!"
-    check: command -v lemminx || test -x "$HOME/bin/lemminx"
-    dependencies:
-    - tenv
   macos-work:
     install: |
       set -e
@@ -120,4 +61,63 @@ environments:
       echo "LemMinX installation complete!"
     check: command -v lemminx || test -x "$HOME/bin/lemminx"
     dependencies:
-    - tenv
+    - homebrew
+  macos-home:
+    install: |
+      set -e
+
+      # Get the latest release info
+      LATEST_URL=$(curl -s https://api.github.com/repos/redhat-developer/vscode-xml/releases/latest | grep "browser_download_url.*lemminx-osx-aarch_64\.zip" | cut -d '"' -f 4)
+
+      if [ -z "$LATEST_URL" ]; then
+        echo "Error: Could not find lemminx-osx-aarch_64.zip in latest release"
+        exit 1
+      fi
+
+      echo "Downloading lemminx from: $LATEST_URL"
+
+      # Create temp directory
+      TEMP_DIR=$(mktemp -d)
+      cd "$TEMP_DIR"
+
+      # Download the zip file
+      curl -L -o lemminx.zip "$LATEST_URL"
+
+      # Extract the zip file
+      unzip lemminx.zip
+
+      # Find the lemminx binary (it should be named lemminx-osx-aarch_64 after extraction)
+      if [ -f lemminx-osx-aarch_64 ]; then
+        BINARY_PATH="lemminx-osx-aarch_64"
+      elif [ -f lemminx ]; then
+        BINARY_PATH="lemminx"
+      elif [ -f */lemminx ]; then
+        BINARY_PATH="*/lemminx"
+      else
+        echo "Error: Could not find lemminx binary in downloaded zip"
+        ls -la
+        exit 1
+      fi
+
+      # Make it executable
+      chmod +x "$BINARY_PATH"
+
+      # Install to /usr/local/bin (or ~/bin if no sudo) with the name 'lemminx'
+      if [ -w /usr/local/bin ]; then
+        cp "$BINARY_PATH" /usr/local/bin/lemminx
+        echo "Installed lemminx to /usr/local/bin/lemminx"
+      else
+        mkdir -p "$HOME/bin"
+        cp "$BINARY_PATH" "$HOME/bin/lemminx"
+        echo "Installed lemminx to $HOME/bin/lemminx"
+        echo "Make sure $HOME/bin is in your PATH"
+      fi
+
+      # Cleanup
+      cd /
+      rm -rf "$TEMP_DIR"
+
+      echo "LemMinX installation complete!"
+    check: command -v lemminx || test -x "$HOME/bin/lemminx"
+    dependencies:
+    - homebrew
