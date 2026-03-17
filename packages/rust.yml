@@ -5,11 +5,11 @@ homepage: "https://www.rust-lang.org"
 description: |
   A language empowering everyone to build reliable and efficient software
 
-_curl: &curl
+_homebrew: &homebrew
   install: "curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh"
   check: "command -v rustup && command -v cargo"
   dependencies: [curl]
 
 environments:
-  macos-home: *curl
-  macos-work: *curl
+  macos-home: *homebrew
+  macos-work: *homebrew

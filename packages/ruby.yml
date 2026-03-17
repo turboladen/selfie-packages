@@ -1,19 +1,27 @@
----
 name: ruby
-version: "0.1.0"
+version: 0.1.0
 homepage: https://ruby-lang.org
-
-_ruby_install: &ruby_install
-  install: |
-    set -e
-    ruby-install --update
-    # ruby-install --no-reinstall ruby -- --enable-shared --with-openssl-dir=`brew --prefix openssl@1.1`
-    ruby-install --no-reinstall ruby -- --enable-shared
-  check: ls ~/.rubies/ruby-*/bin/ruby >/dev/null 2>&1
-  dependencies:
-    - ruby-install
-    - homebrew
+description: |
+  Dynamic, object-oriented programming language — installed via ruby-install and managed with chruby.
 
 environments:
-  macos-home: *ruby_install
-  macos-work: *ruby_install
+  macos-home:
+    install: |
+      set -e
+      ruby-install --update
+      # ruby-install --no-reinstall ruby -- --enable-shared --with-openssl-dir=`brew --prefix openssl@1.1`
+      ruby-install --no-reinstall ruby -- --enable-shared
+    check: ls ~/.rubies/ruby-*/bin/ruby >/dev/null 2>&1
+    dependencies:
+      - ruby-install
+      - homebrew
+  macos-work:
+    install: |
+      set -e
+      ruby-install --update
+      # ruby-install --no-reinstall ruby -- --enable-shared --with-openssl-dir=`brew --prefix openssl@1.1`
+      ruby-install --no-reinstall ruby -- --enable-shared
+    check: ls ~/.rubies/ruby-*/bin/ruby >/dev/null 2>&1
+    dependencies:
+      - ruby-install
+      - homebrew

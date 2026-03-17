@@ -2,11 +2,14 @@
 name: ripgrep
 version: 0.1.0
 homepage: https://github.com/BurntSushi/ripgrep
-description: ripgrep recursively searches directories for a regex pattern while respecting your gitignore
+description: |
+  ripgrep recursively searches directories for a regex pattern while respecting your gitignore
 
 _brew: &brew
   install: brew install ripgrep
   check: which rg
+  audit: |
+    brew list ripgrep 2>/dev/null && echo "homebrew"
   dependencies: [homebrew]
 
 environments:

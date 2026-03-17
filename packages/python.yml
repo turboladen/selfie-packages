@@ -1,14 +1,17 @@
----
 name: python
-version: "0.1.0"
+version: 0.1.0
 homepage: https://python.org
-
-_uv_python_install: &uv_python_install
-  install: uv python install
-  check: uv python find
-  dependencies:
-    - uv
+description: |
+  General-purpose interpreted programming language — installed via uv for tooling that requires it.
 
 environments:
-  macos-home: *uv_python_install
-  macos-work: *uv_python_install
+  macos-work:
+    install: uv python install
+    check: uv python find
+    dependencies:
+      - uv
+  macos-home:
+    install: uv python install
+    check: uv python find
+    dependencies:
+      - uv

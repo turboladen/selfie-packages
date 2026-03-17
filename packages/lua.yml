@@ -1,13 +1,16 @@
----
 name: lua
 version: 0.1.0
 homepage: https://www.lua.org/
-
-_brew: &brew
-  install: brew install lua
-  check: command -v lua
-  dependencies: [homebrew]
+description: Lightweight, embeddable scripting language — used heavily for Neovim plugin configuration.
 
 environments:
-  macos-home: *brew
-  macos-work: *brew
+  macos-home:
+    install: brew install lua
+    check: command -v lua
+    dependencies:
+      - homebrew
+  macos-work:
+    install: brew install lua
+    check: command -v lua
+    dependencies:
+      - homebrew
