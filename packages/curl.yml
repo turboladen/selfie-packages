@@ -11,6 +11,3 @@ _macos: &macos
 environments:
   macos-home: *macos
   macos-work: *macos
-  arch-home:
-    install: sudo pacman --sync --noconfirm --needed curl
-    check: command -v curl
