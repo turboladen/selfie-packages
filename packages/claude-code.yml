@@ -1,0 +1,11 @@
+name: claude-code
+version: 0.1.0
+homepage: https://docs.anthropic.com/en/docs/claude-code
+description: Anthropic's official CLI for agentic coding with Claude. Provides the `claude` command for interactive and automated coding workflows.
+environments:
+  macos-home:
+    install: bun install -g @anthropic-ai/claude-code
+    check: command -v claude
+    audit: bun pm ls -g 2>/dev/null | grep -q @anthropic-ai/claude-code
+    dependencies:
+    - bun
