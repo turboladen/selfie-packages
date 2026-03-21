@@ -3,15 +3,14 @@ version: 0.1.0
 homepage: https://python.org
 description: |
   General-purpose interpreted programming language — installed via uv for tooling that requires it.
-
 environments:
   macos-work:
-    install: uv python install
-    check: uv python find
+    install: $HOME/.local/bin/uv python install
+    check: $HOME/.local/bin/uv python find
     dependencies:
-      - uv
+    - uv
   macos-home:
-    install: uv python install
-    check: uv python find
+    install: $HOME/.local/bin/uv python install
+    check: $HOME/.local/bin/uv python find
     dependencies:
-      - uv
+    - uv

@@ -1,14 +1,15 @@
----
 name: htmlhint
-version: "0.1.0"
+version: 0.1.0
 homepage: https://github.com/htmlhint/HTMLHint
 description: The static code analysis tool you need for your HTML
-
-_bun_install: &bun_install
-  install: bun install --global htmlhint
-  check: command -v htmlhint
-  dependencies: [bun]
-
 environments:
-  macos-home: *bun_install
-  macos-work: *bun_install
+  macos-work:
+    install: $HOME/.bun/bin/bun install --global htmlhint
+    check: '[ -x "$HOME/.bun/bin/htmlhint" ] || command -v htmlhint'
+    dependencies:
+    - bun
+  macos-home:
+    install: $HOME/.bun/bin/bun install --global htmlhint
+    check: '[ -x "$HOME/.bun/bin/htmlhint" ] || command -v htmlhint'
+    dependencies:
+    - bun

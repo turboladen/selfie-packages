@@ -7,34 +7,43 @@ environments:
     install: |
       set -e
       brew install fnm
-      echo "fnm env --use-on-cd --shell fish | source" >> ~/.config/fish/conf.d/fnm.fish
-      echo "fnm completions --shell fish | source" >> ~/.config/fish/completions/fnm.fish
+      mkdir -p ~/.config/fish/conf.d
+      printf 'source (fnm env --use-on-cd --shell fish | psub)\nfnm use default --silent-if-unchanged 2>/dev/null; or true\n' > ~/.config/fish/conf.d/fnm.fish
+      mkdir -p ~/.config/fish/completions
+      fnm completions --shell fish > ~/.config/fish/completions/fnm.fish
     check: |
       set -e
       command -v fnm
       ls ~/.config/fish/conf.d/fnm.fish &> /dev/null
-    dependencies:
-    - homebrew
-  macos-work:
-    install: |
-      set -e
-      brew install fnm
-      echo "fnm env --use-on-cd --shell fish | source" >> ~/.config/fish/conf.d/fnm.fish
-      echo "fnm completions --shell fish | source" >> ~/.config/fish/completions/fnm.fish
-    check: |
-      set -e
-      command -v fnm
-      ls ~/.config/fish/conf.d/fnm.fish &> /dev/null
+      grep -q 'fnm env' ~/.config/fish/conf.d/fnm.fish
     dependencies:
     - homebrew
   arch-home:
     install: |
       set -e
       sudo pacman -S --noconfirm --needed fnm
-      echo "fnm env --use-on-cd --shell fish | source" >> ~/.config/fish/conf.d/fnm.fish
-      echo "fnm completions --shell fish | source" >> ~/.config/fish/completions/fnm.fish
+      mkdir -p ~/.config/fish/conf.d
+      printf 'source (fnm env --use-on-cd --shell fish | psub)\nfnm use default --silent-if-unchanged 2>/dev/null; or true\n' > ~/.config/fish/conf.d/fnm.fish
+      mkdir -p ~/.config/fish/completions
+      fnm completions --shell fish > ~/.config/fish/completions/fnm.fish
     check: |
       set -e
       command -v fnm
       ls ~/.config/fish/conf.d/fnm.fish &> /dev/null
+      grep -q 'fnm env' ~/.config/fish/conf.d/fnm.fish
     dependencies: []
+  macos-work:
+    install: |
+      set -e
+      brew install fnm
+      mkdir -p ~/.config/fish/conf.d
+      printf 'source (fnm env --use-on-cd --shell fish | psub)\nfnm use default --silent-if-unchanged 2>/dev/null; or true\n' > ~/.config/fish/conf.d/fnm.fish
+      mkdir -p ~/.config/fish/completions
+      fnm completions --shell fish > ~/.config/fish/completions/fnm.fish
+    check: |
+      set -e
+      command -v fnm
+      ls ~/.config/fish/conf.d/fnm.fish &> /dev/null
+      grep -q 'fnm env' ~/.config/fish/conf.d/fnm.fish
+    dependencies:
+    - homebrew

@@ -1,15 +1,20 @@
----
 name: typescript-language-server
-version: "0.1.0"
+version: 0.1.0
 homepage: https://github.com/typescript-language-server/typescript-language-server
 description: TypeScript & JavaScript Language Server
-
-_bun_install: &bun_install
-  install: bun install --global typescript-language-server
-  check: command -v typescript-language-server
-  dependencies: [bun]
-
 environments:
-  macos-home: *bun_install
-  macos-work: *bun_install
-  arch-home: *bun_install
+  macos-home:
+    install: $HOME/.bun/bin/bun install --global typescript-language-server
+    check: '[ -x "$HOME/.bun/bin/typescript-language-server" ] || command -v typescript-language-server'
+    dependencies:
+    - bun
+  macos-work:
+    install: $HOME/.bun/bin/bun install --global typescript-language-server
+    check: '[ -x "$HOME/.bun/bin/typescript-language-server" ] || command -v typescript-language-server'
+    dependencies:
+    - bun
+  arch-home:
+    install: bun install --global typescript-language-server
+    check: command -v typescript-language-server
+    dependencies:
+    - bun

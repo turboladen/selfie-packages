@@ -1,15 +1,20 @@
----
 name: cmake-language-server
-version: "0.1.0"
+version: 0.1.0
 homepage: https://github.com/regen100/cmake-language-server
 description: CMake LSP Implementation
-
-_uv: &uv
-  install: uv tool install cmake-language-server
-  check: command -v cmake-language-server
-  dependencies: [uv]
-
 environments:
-  macos-home: *uv
-  macos-work: *uv
-  arch-home: *uv
+  arch-home:
+    install: uv tool install cmake-language-server
+    check: command -v cmake-language-server
+    dependencies:
+    - uv
+  macos-home:
+    install: $HOME/.local/bin/uv tool install cmake-language-server
+    check: '[ -x "$HOME/.local/bin/cmake-language-server" ] || command -v cmake-language-server'
+    dependencies:
+    - uv
+  macos-work:
+    install: $HOME/.local/bin/uv tool install cmake-language-server
+    check: '[ -x "$HOME/.local/bin/cmake-language-server" ] || command -v cmake-language-server'
+    dependencies:
+    - uv

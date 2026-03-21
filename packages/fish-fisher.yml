@@ -1,16 +1,21 @@
----
-name: fish-fisher
+name: fisher
 version: 0.1.0
 homepage: https://github.com/jorgebucaran/fisher
-description: Plugin manager for the Fish shell
-
-_brew: &brew
-  install: brew install fisher
-  check: command -v fisher
-  dependencies:
-    - homebrew
-    - fish
-
+description: A plugin manager for Fish
 environments:
-  macos-home: *brew
-  macos-work: *brew
+  macos-home:
+    install: |
+      set -e
+      fish -c "curl -sL https://raw.githubusercontent.com/jorgebucaran/fisher/main/functions/fisher.fish | source && fisher install jorgebucaran/fisher"
+    check: command -v fisher
+    dependencies:
+    - curl
+    - fish
+  macos-work:
+    install: |
+      set -e
+      fish -c "curl -sL https://raw.githubusercontent.com/jorgebucaran/fisher/main/functions/fisher.fish | source && fisher install jorgebucaran/fisher"
+    check: command -v fisher
+    dependencies:
+    - curl
+    - fish

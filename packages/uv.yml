@@ -3,24 +3,6 @@ version: 0.1.0
 homepage: https://docs.astral.sh/uv/
 description: Fast Python package and project manager
 environments:
-  macos-work:
-    install: |
-      set -e
-      curl -LsSf https://astral.sh/uv/install.sh | sh
-      # Source the environment to make uv available immediately
-      source ~/.local/bin/env
-    check: command -v uv
-    dependencies:
-    - curl
-  macos-home:
-    install: |
-      set -e
-      curl -LsSf https://astral.sh/uv/install.sh | sh
-      # Source the environment to make uv available immediately
-      source ~/.local/bin/env
-    check: command -v uv
-    dependencies:
-    - curl
   arch-home:
     install: |
       set -e
@@ -28,3 +10,17 @@ environments:
         curl -LsSf https://astral.sh/uv/install.sh | sh
     check: command -v uv
     dependencies: []
+  macos-work:
+    install: |
+      set -e
+      curl -LsSf https://astral.sh/uv/install.sh | sh
+    check: '[ -x "$HOME/.local/bin/uv" ] || command -v uv'
+    dependencies:
+    - curl
+  macos-home:
+    install: |
+      set -e
+      curl -LsSf https://astral.sh/uv/install.sh | sh
+    check: '[ -x "$HOME/.local/bin/uv" ] || command -v uv'
+    dependencies:
+    - curl
