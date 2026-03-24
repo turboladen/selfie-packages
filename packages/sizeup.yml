@@ -1,0 +1,14 @@
+---
+name: sizeup
+version: 0.1.0
+homepage: https://www.irradiatedsoftware.com/sizeup/
+description: Powerful, keyboard-centric window management
+
+_brew: &brew
+  install: brew install --cask sizeup
+  check: brew list --cask sizeup
+  dependencies: [homebrew]
+
+environments:
+  macos-home: *brew
+  macos-work: *brew

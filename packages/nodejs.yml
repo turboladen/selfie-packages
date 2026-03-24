@@ -1,0 +1,34 @@
+name: nodejs
+version: 0.1.0
+homepage: https://nodejs.org
+description: |
+  "NOTE: Use `bun` when possible."
+environments:
+  macos-work:
+    install: |
+      set -e
+      fnm install --lts
+      fnm default lts-latest
+    check: |
+      set -e
+      eval "$(fnm env --shell bash)"
+      command -v node
+      command -v npm
+      npm --version
+      fnm list | grep -q 'default'
+    dependencies:
+    - fnm
+  macos-home:
+    install: |
+      set -e
+      fnm install --lts
+      fnm default lts-latest
+    check: |
+      set -e
+      eval "$(fnm env --shell bash)"
+      command -v node
+      command -v npm
+      npm --version
+      fnm list | grep -q 'default'
+    dependencies:
+    - fnm

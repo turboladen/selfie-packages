@@ -1,0 +1,15 @@
+name: yaml-language-server
+version: 0.1.0
+homepage: https://github.com/redhat-developer/yaml-language-server
+description: Language Server for YAML files
+environments:
+  macos-home:
+    install: $HOME/.bun/bin/bun install --global yaml-language-server
+    check: '[ -x "$HOME/.bun/bin/yaml-language-server" ] || command -v yaml-language-server'
+    dependencies:
+    - bun
+  macos-work:
+    install: $HOME/.bun/bin/bun install --global yaml-language-server
+    check: '[ -x "$HOME/.bun/bin/yaml-language-server" ] || command -v yaml-language-server'
+    dependencies:
+    - bun

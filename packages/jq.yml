@@ -1,0 +1,19 @@
+---
+name: jq
+version: 0.1.0
+homepage: https://github.com/jqlang/jq
+description: Command-line JSON processor
+
+_brew: &brew
+  install: brew install jq
+  check: command -v jq
+  dependencies: [homebrew]
+
+environments:
+  macos-home: *brew
+  macos-work: *brew
+
+  arch-home:
+    install: sudo pacman -S --noconfirm --needed jq
+    check: command -v jq
+    dependencies: []

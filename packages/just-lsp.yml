@@ -1,0 +1,15 @@
+---
+name: just-lsp
+version: "0.1.0"
+homepage: https://github.com/terror/just-lsp
+description: A language server for just
+
+_cargo_binstall: &cargo_binstall
+  install: cargo binstall --no-confirm just-lsp
+  check: command -v just-lsp
+  dependencies: [cargo-binstall]
+
+environments:
+  macos-home: *cargo_binstall
+  macos-work: *cargo_binstall
+  arch-home: *cargo_binstall

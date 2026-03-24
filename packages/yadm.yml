@@ -1,0 +1,14 @@
+---
+name: yadm
+version: "0.1.0"
+homepage: https://yadm.io
+description: Yet Another Dotfiles Manager
+
+_brew: &brew
+  install: brew install yadm
+  check: command -v yadm
+  dependencies: [homebrew]
+
+environments:
+  macos-home: *brew
+  macos-work: *brew
