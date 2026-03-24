@@ -1,0 +1,20 @@
+name: eslint
+version: 0.1.0
+homepage: https://eslint.org/
+description: Find and fix problems in your JavaScript code
+environments:
+  macos-work:
+    install: $HOME/.bun/bin/bun install --global eslint
+    check: '[ -x "$HOME/.bun/bin/eslint" ] || command -v eslint'
+    dependencies:
+    - bun
+  arch-home:
+    install: bun install --global eslint
+    check: command -v eslint
+    dependencies:
+    - bun
+  macos-home:
+    install: $HOME/.bun/bin/bun install --global eslint
+    check: '[ -x "$HOME/.bun/bin/eslint" ] || command -v eslint'
+    dependencies:
+    - bun

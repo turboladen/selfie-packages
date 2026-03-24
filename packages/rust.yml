@@ -1,0 +1,15 @@
+---
+name: rust
+version: "0.1.0"
+homepage: "https://www.rust-lang.org"
+description: |
+  A language empowering everyone to build reliable and efficient software
+
+_homebrew: &homebrew
+  install: "curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh"
+  check: "command -v rustup && command -v cargo"
+  dependencies: [curl]
+
+environments:
+  macos-home: *homebrew
+  macos-work: *homebrew
