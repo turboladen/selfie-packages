@@ -1,0 +1,10 @@
+name: beads
+version: 0.1.0
+homepage: https://github.com/steveyegge/beads
+description: AI-native issue tracker for coding agent workflows. Uses a Dolt-backed SQL database with hash-based IDs, dependency tracking, and bd ready for unblocked task discovery.
+environments:
+  macos-home:
+    install: brew install beads
+    check: which bd
+    dependencies:
+    - dolt

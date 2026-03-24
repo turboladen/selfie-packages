@@ -1,0 +1,11 @@
+---
+name: postico
+version: 0.1.0
+homepage: https://eggerapps.at/postico/v1.php
+description: A Modern PostgreSQL Client for the Mac
+
+environments:
+  macos-work:
+    install: brew install --cask postico@1
+    check: ls /Applications/Postico*.app &> /dev/null
+    dependencies: [homebrew]
