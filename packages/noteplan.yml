@@ -1,0 +1,16 @@
+---
+name: noteplan
+version: 0.1.0
+homepage: https://noteplan.co
+description: |
+  NotePlan allows professionals around the world to keep track of their
+  jam-packed schedules and focus on their tasks rather than on managing them.
+
+_mas_lucky: &mas_lucky
+  install: mas lucky "NotePlan"
+  check: ls "/Applications/NotePlan.app/" &> /dev/null
+  dependencies: [mas]
+
+environments:
+  macos-home: *mas_lucky
+  macos-work: *mas_lucky

@@ -1,0 +1,21 @@
+name: basedpyright
+version: 0.1.0
+homepage: https://docs.basedpyright.com/latest/
+description: Basedpyright is a fork of pyright with various type checking improvements, pylance features and more.
+environments:
+  macos-home:
+    install: $HOME/.local/bin/uv tool install basedpyright
+    check: |
+      set -e
+      [ -x "$HOME/.local/bin/basedpyright" ] || command -v basedpyright
+      [ -x "$HOME/.local/bin/basedpyright-langserver" ] || command -v basedpyright-langserver
+    dependencies:
+    - uv
+  macos-work:
+    install: $HOME/.local/bin/uv tool install basedpyright
+    check: |
+      set -e
+      [ -x "$HOME/.local/bin/basedpyright" ] || command -v basedpyright
+      [ -x "$HOME/.local/bin/basedpyright-langserver" ] || command -v basedpyright-langserver
+    dependencies:
+    - uv

@@ -1,0 +1,19 @@
+name: topgrade
+homepage: https://github.com/topgrade-rs/topgrade
+description: Upgrade all the things
+
+environments:
+  macos-work:
+    install: brew install topgrade
+    check: command -v topgrade
+    dependencies:
+      - homebrew
+  macos-home:
+    install: brew install topgrade
+    check: command -v topgrade
+    dependencies:
+      - homebrew
+
+dotfiles:
+  - source: topgrade/topgrade.toml
+    target: /Users/sloveless/.config/topgrade.toml

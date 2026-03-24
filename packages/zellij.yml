@@ -1,0 +1,14 @@
+---
+name: zellij
+version: "0.1.0"
+homepage: https://zellij.dev
+description: Pluggable terminal workspace, with terminal multiplexer as the base feature
+
+_brew: &brew
+  install: brew install zellij
+  check: command -v zellij
+  dependencies: [homebrew]
+
+environments:
+  macos-home: *brew
+  macos-work: *brew

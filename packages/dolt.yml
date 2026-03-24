@@ -1,0 +1,9 @@
+name: dolt
+version: 0.1.0
+homepage: https://github.com/dolthub/dolt
+description: Git for data — a version-controlled SQL database with branching, diffing, and merging for tabular data. Powers the beads issue tracker backend.
+environments:
+  macos-home:
+    install: brew install dolt
+    check: which dolt
+    dependencies: []

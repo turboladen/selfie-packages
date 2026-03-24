@@ -1,0 +1,17 @@
+name: font-powerline-symbols
+version: 0.1.0
+homepage: https://github.com/powerline/powerline
+description: Powerline Symbols
+environments:
+  macos-work:
+    install: brew install --cask font-powerline-symbols
+    check: 'fc-list : family | grep ''PowerlineSymbols'''
+    dependencies:
+    - homebrew
+    - fontconfig
+  macos-home:
+    install: brew install --cask font-powerline-symbols
+    check: 'fc-list : family | grep ''PowerlineSymbols'''
+    dependencies:
+    - homebrew
+    - fontconfig
