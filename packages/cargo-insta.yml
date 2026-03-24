@@ -1,0 +1,16 @@
+---
+name: cargo-insta
+version: 0.1.0
+homepage: https://github.com/mitsuhiko/insta
+description: A snapshot library for rust
+
+_cargo_binstall: &cargo_binstall
+  install: cargo binstall --no-confirm cargo-insta
+  check: command -v cargo-insta
+  dependencies:
+    - cargo-binstall
+
+environments:
+  macos-home: *cargo_binstall
+  macos-work: *cargo_binstall
+  arch-home: *cargo_binstall

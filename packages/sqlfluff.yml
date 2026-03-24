@@ -1,0 +1,15 @@
+name: sqlfluff
+version: 0.1.0
+homepage: https://www.sqlfluff.com/
+description: The SQL Linter for humans
+environments:
+  macos-work:
+    install: $HOME/.local/bin/uv tool install sqlfluff
+    check: '[ -x "$HOME/.local/bin/sqlfluff" ] || command -v sqlfluff'
+    dependencies:
+    - uv
+  macos-home:
+    install: $HOME/.local/bin/uv tool install sqlfluff
+    check: '[ -x "$HOME/.local/bin/sqlfluff" ] || command -v sqlfluff'
+    dependencies:
+    - uv

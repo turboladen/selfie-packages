@@ -1,0 +1,16 @@
+---
+name: cargo-tarpaulin
+version: "0.1.0"
+homepage: https://github.com/xd009642/tarpaulin
+description: A code coverage tool for Rust projects
+
+_cargo_binstall: &cargo_binstall
+  install: cargo binstall --no-confirm cargo-tarpaulin
+  check: command -v cargo-tarpaulin
+  dependencies:
+    - cargo-binstall
+
+environments:
+  macos-home: *cargo_binstall
+  macos-work: *cargo_binstall
+  arch-home: *cargo_binstall

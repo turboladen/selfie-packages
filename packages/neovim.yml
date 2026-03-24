@@ -1,0 +1,24 @@
+---
+name: neovim
+version: 0.1.0
+homepage: https://neovim.io
+description: hyperextensible Vim-based text editor
+
+_deps: &deps
+  - deno
+  - lua
+  - tree-sitter
+
+_brew: &brew
+  install: brew install neovim
+  check: command -v nvim
+  dependencies: *deps
+
+environments:
+  macos-home: *brew
+  macos-work: *brew
+
+  arch-home:
+    install: sudo pacman -S --noconfirm --needed neovim python-pynvim wl-clipboard
+    check: command -v nvim
+    dependencies: *deps

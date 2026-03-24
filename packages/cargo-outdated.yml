@@ -1,0 +1,16 @@
+---
+name: cargo-outdated
+version: "0.1.0"
+homepage: https://github.com/kbknapp/cargo-outdated
+description: A cargo subcommand for displaying when Rust dependencies are out of date
+
+_cargo_binstall: &cargo_binstall
+  install: cargo binstall --no-confirm cargo-outdated
+  check: command -v cargo-outdated
+  dependencies:
+    - cargo-binstall
+
+environments:
+  macos-home: *cargo_binstall
+  macos-work: *cargo_binstall
+  arch-home: *cargo_binstall
