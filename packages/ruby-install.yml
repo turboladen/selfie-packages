@@ -1,0 +1,14 @@
+name: ruby-install
+homepage: https://github.com/postmodern/ruby-install
+description: Installs Ruby, JRuby, TruffleRuby, or mruby
+environments:
+  macos-home:
+    install: brew install ruby-install
+    check: command -v ruby-install
+    dependencies:
+    - homebrew
+  macos-work:
+    install: brew install ruby-install
+    check: command -v ruby-install
+    dependencies:
+    - homebrew

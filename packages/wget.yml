@@ -1,0 +1,14 @@
+name: wget
+homepage: https://www.gnu.org/software/wget/
+description: Internet file retriever
+environments:
+  macos-work:
+    install: brew install wget
+    check: command -v wget
+    dependencies:
+    - homebrew
+  macos-home:
+    install: brew install wget
+    check: command -v wget
+    dependencies:
+    - homebrew

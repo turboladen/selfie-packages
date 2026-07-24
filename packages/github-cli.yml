@@ -1,0 +1,15 @@
+name: github-cli
+homepage: https://cli.github.com/
+description: GitHub CLI brings GitHub to your terminal.
+
+environments:
+  macos-work:
+    install: brew install gh
+    check: command -v gh
+    dependencies:
+      - homebrew
+  macos-home:
+    install: brew install gh
+    check: command -v gh
+    dependencies:
+      - homebrew

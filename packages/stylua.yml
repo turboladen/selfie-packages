@@ -1,0 +1,14 @@
+name: stylua
+homepage: https://github.com/JohnnyMorganz/StyLua
+description: A Lua code formatter
+environments:
+  macos-work:
+    install: brew install stylua
+    check: command -v stylua
+    dependencies:
+    - homebrew
+  macos-home:
+    install: brew install stylua
+    check: command -v stylua
+    dependencies:
+    - homebrew

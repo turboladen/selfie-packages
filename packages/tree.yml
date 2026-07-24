@@ -1,0 +1,14 @@
+name: tree
+homepage: https://oldmanprogrammer.net/source.php?dir=projects/tree
+description: Display directories as trees (with optional color/HTML output)
+environments:
+  macos-work:
+    install: brew install tree
+    check: command -v tree
+    dependencies:
+    - homebrew
+  macos-home:
+    install: brew install tree
+    check: command -v tree
+    dependencies:
+    - homebrew

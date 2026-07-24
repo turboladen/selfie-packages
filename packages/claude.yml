@@ -1,0 +1,15 @@
+name: claude
+homepage: https://claude.ai
+description: Anthropic's official Claude AI desktop app
+
+environments:
+  macos-home:
+    install: brew install --cask claude
+    check: brew list --cask claude
+    dependencies:
+      - homebrew
+  macos-work:
+    install: brew install --cask claude
+    check: brew list --cask claude
+    dependencies:
+      - homebrew

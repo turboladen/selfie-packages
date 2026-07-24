@@ -1,0 +1,12 @@
+---
+name: rofi
+version: 0.1.0
+homepage: https://github.com/davatorium/rofi
+description: |
+  Rofi: A window switcher, application launcher and dmenu replacement
+
+environments:
+  arch-home:
+    install: sudo pacman -S --noconfirm --needed kanshi
+    check: command -v kanshi
+    dependencies: []

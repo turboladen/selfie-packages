@@ -1,0 +1,12 @@
+---
+name: awscli
+version: "0.1.0"
+homepage: https://aws.amazon.com/cli/
+description: The AWS Command Line Interface (AWS CLI) is a unified tool to manage your AWS services.
+
+environments:
+  macos-work:
+    install: brew install awscli
+    check: command -v aws
+    dependencies:
+      - homebrew

@@ -1,0 +1,15 @@
+name: buildifier
+homepage: https://github.com/bazelbuild/buildtools
+description: Format bazel BUILD files with a standard convention
+
+environments:
+  macos-home:
+    install: brew install buildifier
+    check: command -v buildifier
+    dependencies:
+      - homebrew
+  macos-work:
+    install: brew install buildifier
+    check: command -v buildifier
+    dependencies:
+      - homebrew

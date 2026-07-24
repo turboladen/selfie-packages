@@ -1,0 +1,27 @@
+name: bat
+homepage: https://github.com/sharkdp/bat
+description: |
+  A cat(1) clone with wings.
+
+  Note: I install using the OS package manager instead of `cargo` so as to not have
+  to deal with man pages and shell completions and all that.
+
+environments:
+  macos-home:
+    install: brew install bat
+    check: command -v bat
+    dependencies:
+      - homebrew
+  macos-work:
+    install: brew install bat
+    check: command -v bat
+    dependencies:
+      - homebrew
+  arch-home:
+    install: sudo pacman -S --noconfirm --needed bat
+    check: command -v bat
+    dependencies: []
+
+dotfiles:
+  - source: bat/config
+    target: ~/.config/bat/config

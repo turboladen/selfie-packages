@@ -1,0 +1,17 @@
+---
+name: paru
+version: "0.1.0"
+homepage: https://github.com/Morganamilo/paru
+description: Feature packed AUR helper
+
+environments:
+  arch-home:
+    install: |
+      sudo pacman -S --needed base-devel
+      mkdir -p /tmp/paru
+      git clone https://aur.archlinux.org/paru.git /tmp/paru
+      cd /tmp/paru
+      makepkg -si
+    check: command -v paru
+    dependencies:
+      - git

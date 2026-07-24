@@ -1,0 +1,20 @@
+name: cargo-bloat
+homepage: https://github.com/RazrFalcon/cargo-bloat
+description: Find out what takes most of the space in your executable.
+
+environments:
+  arch-home:
+    install: cargo binstall --no-confirm cargo-bloat
+    check: command -v cargo-bloat
+    dependencies:
+      - cargo-binstall
+  macos-home:
+    install: cargo binstall --no-confirm cargo-bloat
+    check: command -v cargo-bloat
+    dependencies:
+      - cargo-binstall
+  macos-work:
+    install: cargo binstall --no-confirm cargo-bloat
+    check: command -v cargo-bloat
+    dependencies:
+      - cargo-binstall

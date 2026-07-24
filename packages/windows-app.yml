@@ -1,0 +1,11 @@
+---
+name: windows-app
+version: 0.1.0
+homepage: https://apps.apple.com/ms/app/windows-app/id1295203466?mt=12
+description: Previously known as Microsoft Remote Desktop
+
+environments:
+  macos-work:
+    install: mas lucky "Windows App"
+    check: ls /Applications/Windows\ App.app/ &> /dev/null
+    dependencies: [mas]

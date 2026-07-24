@@ -1,0 +1,20 @@
+name: cargo-nextest
+homepage: https://github.com/nextest-rs/nextest
+description: A next-generation test runner for Rust
+
+environments:
+  arch-home:
+    install: cargo binstall --no-confirm cargo-nextest
+    check: command -v cargo-nextest
+    dependencies:
+      - cargo-binstall
+  macos-home:
+    install: cargo binstall --no-confirm cargo-nextest
+    check: command -v cargo-nextest
+    dependencies:
+      - cargo-binstall
+  macos-work:
+    install: cargo binstall --no-confirm cargo-nextest
+    check: command -v cargo-nextest
+    dependencies:
+      - cargo-binstall

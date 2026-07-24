@@ -1,0 +1,15 @@
+name: dprint
+homepage: https://dprint.dev/
+description: Pluggable and configurable code formatting platform written in Rust
+
+environments:
+  macos-home:
+    install: brew install dprint
+    check: command -v dprint
+    dependencies:
+      - homebrew
+  macos-work:
+    install: brew install dprint
+    check: command -v dprint
+    dependencies:
+      - homebrew

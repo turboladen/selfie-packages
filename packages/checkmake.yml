@@ -1,0 +1,15 @@
+name: checkmake
+homepage: https://github.com/checkmake/checkmake
+description: Linter/analyzer for Makefiles
+
+environments:
+  macos-work:
+    install: brew install checkmake
+    check: command -v checkmake
+    dependencies:
+      - homebrew
+  macos-home:
+    install: brew install checkmake
+    check: command -v checkmake
+    dependencies:
+      - homebrew

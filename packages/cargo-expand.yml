@@ -1,0 +1,20 @@
+name: cargo-expand
+homepage: https://github.com/dtolnay/cargo-expand
+description: Subcommand to show result of macro expansion
+
+environments:
+  macos-work:
+    install: cargo binstall --no-confirm cargo-expand
+    check: command -v cargo-expand
+    dependencies:
+      - cargo-binstall
+  arch-home:
+    install: cargo binstall --no-confirm cargo-expand
+    check: command -v cargo-expand
+    dependencies:
+      - cargo-binstall
+  macos-home:
+    install: cargo binstall --no-confirm cargo-expand
+    check: command -v cargo-expand
+    dependencies:
+      - cargo-binstall

@@ -1,0 +1,15 @@
+name: jless
+homepage: https://jless.io/
+description: Command-line pager for JSON data
+
+environments:
+  macos-work:
+    install: brew install jless
+    check: command -v jless
+    dependencies:
+      - homebrew
+  macos-home:
+    install: brew install jless
+    check: command -v jless
+    dependencies:
+      - homebrew

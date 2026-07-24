@@ -1,0 +1,14 @@
+name: procs
+homepage: https://github.com/dalance/procs
+description: A modern replacement for ps writen in Rust
+environments:
+  macos-home:
+    install: brew install procs
+    check: command -v procs
+    dependencies:
+    - homebrew
+  macos-work:
+    install: brew install procs
+    check: command -v procs
+    dependencies:
+    - homebrew

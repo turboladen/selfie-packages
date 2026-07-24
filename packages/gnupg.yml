@@ -1,0 +1,20 @@
+name: gnupg
+homepage: https://gnupg.org/
+description: |
+  GNU Privacy Guard — OpenPGP encryption and signing tool used for commit signing and secure key management.
+
+environments:
+  macos-work:
+    install: brew install gnupg
+    check: command -v gpg
+    dependencies:
+      - homebrew
+    recommends:
+      - pinentry
+  macos-home:
+    install: brew install gnupg
+    check: command -v gpg
+    dependencies:
+      - homebrew
+    recommends:
+      - pinentry

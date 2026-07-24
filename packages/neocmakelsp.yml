@@ -1,0 +1,19 @@
+name: neocmakelsp
+homepage: https://github.com/neocmakelsp/neocmakelsp
+description: Another cmake lsp
+environments:
+  arch-home:
+    install: cargo binstall --no-confirm neocmakelsp
+    check: command -v neocmakelsp
+    dependencies:
+    - cargo-binstall
+  macos-work:
+    install: cargo binstall --no-confirm neocmakelsp
+    check: command -v neocmakelsp
+    dependencies:
+    - cargo-binstall
+  macos-home:
+    install: cargo binstall --no-confirm neocmakelsp
+    check: command -v neocmakelsp
+    dependencies:
+    - cargo-binstall

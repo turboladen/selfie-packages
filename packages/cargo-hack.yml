@@ -1,0 +1,22 @@
+name: cargo-hack
+homepage: https://github.com/taiki-e/cargo-hack
+description: >-
+  Cargo subcommand to provide various options useful for testing and continuous
+  integration.
+
+environments:
+  macos-work:
+    install: cargo binstall --no-confirm cargo-hack
+    check: command -v cargo-hack
+    dependencies:
+      - cargo-binstall
+  macos-home:
+    install: cargo binstall --no-confirm cargo-hack
+    check: command -v cargo-hack
+    dependencies:
+      - cargo-binstall
+  arch-home:
+    install: cargo binstall --no-confirm cargo-hack
+    check: command -v cargo-hack
+    dependencies:
+      - cargo-binstall

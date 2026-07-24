@@ -1,0 +1,41 @@
+name: fish
+homepage: https://fishshell.com/
+description: >-
+  fish is a smart and user-friendly command line shell for Linux, macOS, and the
+  rest of the family.
+
+environments:
+  macos-work:
+    install: |
+      set -e
+      brew install fish
+      echo "Run: chsh -s $(brew --prefix)/bin/fish"
+      echo "Make sure it is listed in available shells:"
+      echo "/opt/homebrew/bin/fish | sudo tee -a /etc/shells"
+      echo "Then run: fish_update_completions"
+    check: command -v fish
+    dependencies:
+      - homebrew
+    recommends:
+      - eza
+      - mcfly
+      - starship
+      - zoxide
+      - fastfetch
+  macos-home:
+    install: |
+      set -e
+      brew install fish
+      echo "Run: chsh -s $(brew --prefix)/bin/fish"
+      echo "Make sure it is listed in available shells:"
+      echo "/opt/homebrew/bin/fish | sudo tee -a /etc/shells"
+      echo "Then run: fish_update_completions"
+    check: command -v fish
+    dependencies:
+      - homebrew
+    recommends:
+      - eza
+      - mcfly
+      - starship
+      - zoxide
+      - fastfetch

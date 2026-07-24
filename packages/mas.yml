@@ -1,0 +1,15 @@
+name: mas
+homepage: https://github.com/mas-cli/mas
+description: Mac App Store command-line interface
+
+environments:
+  macos-home:
+    install: brew install mas
+    check: command -v mas
+    dependencies:
+      - homebrew
+  macos-work:
+    install: brew install mas
+    check: command -v mas
+    dependencies:
+      - homebrew

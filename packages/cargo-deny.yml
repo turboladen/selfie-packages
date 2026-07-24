@@ -1,0 +1,20 @@
+name: cargo-deny
+homepage: https://github.com/EmbarkStudios/cargo-deny
+description: Cargo plugin for linting your dependencies
+
+environments:
+  arch-home:
+    install: cargo binstall --no-confirm cargo-deny
+    check: command -v cargo-deny
+    dependencies:
+      - cargo-binstall
+  macos-home:
+    install: cargo binstall --no-confirm cargo-deny
+    check: command -v cargo-deny
+    dependencies:
+      - cargo-binstall
+  macos-work:
+    install: cargo binstall --no-confirm cargo-deny
+    check: command -v cargo-deny
+    dependencies:
+      - cargo-binstall

@@ -1,0 +1,30 @@
+name: solargraph
+homepage: https://solargraph.org
+description: solargraph is a Ruby gem that provides intellisense features through MS's LSP.
+environments:
+  macos-work:
+    install: |
+      set -e
+      source $(brew --prefix)/opt/chruby/share/chruby/chruby.sh
+      chruby 3
+      gem install solargraph
+    check: |
+      set -e
+      source $(brew --prefix)/opt/chruby/share/chruby/chruby.sh
+      chruby 3
+      command -v solargraph
+    dependencies:
+    - ruby
+  macos-home:
+    install: |
+      set -e
+      source $(brew --prefix)/opt/chruby/share/chruby/chruby.sh
+      chruby 3
+      gem install solargraph
+    check: |
+      set -e
+      source $(brew --prefix)/opt/chruby/share/chruby/chruby.sh
+      chruby 3
+      command -v solargraph
+    dependencies:
+    - ruby

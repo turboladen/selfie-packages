@@ -1,0 +1,20 @@
+name: dotenv-linter
+homepage: https://dotenv-linter.github.io
+description: Lightning-fast linter for .env files written in Rust
+
+environments:
+  macos-home:
+    install: cargo binstall --no-confirm dotenv-linter
+    check: command -v dotenv-linter
+    dependencies:
+      - cargo-binstall
+  arch-home:
+    install: cargo binstall --no-confirm dotenv-linter
+    check: command -v dotenv-linter
+    dependencies:
+      - cargo-binstall
+  macos-work:
+    install: cargo binstall --no-confirm dotenv-linter
+    check: command -v dotenv-linter
+    dependencies:
+      - cargo-binstall

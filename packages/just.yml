@@ -1,0 +1,19 @@
+name: just
+homepage: https://just.systems
+description: Just a command runner
+
+environments:
+  macos-work:
+    install: brew install just
+    check: command -v just
+    dependencies:
+      - homebrew
+  macos-home:
+    install: brew install just
+    check: command -v just
+    dependencies:
+      - homebrew
+  arch-home:
+    install: sudo pacman -S --noconfirm --needed just
+    check: command -v just
+    dependencies: []

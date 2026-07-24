@@ -1,0 +1,11 @@
+---
+name: rancher
+version: 0.1.0
+homepage: https://rancherdesktop.io
+description: Container Management and Kubernetes on the Desktop
+
+environments:
+  macos-work:
+    install: brew install --cask rancher
+    check: brew list --cask rancher
+    dependencies: [homebrew]

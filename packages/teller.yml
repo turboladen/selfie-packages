@@ -1,0 +1,13 @@
+---
+name: teller
+version: "0.1.0"
+homepage: https://github.com/tellerops/teller
+description: |
+  Cloud native secrets management for developers - never leave your command line for secrets.
+
+environments:
+  macos-work:
+    install: brew install teller
+    check: command -v teller
+    dependencies:
+      - homebrew

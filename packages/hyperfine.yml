@@ -1,0 +1,15 @@
+name: hyperfine
+homepage: https://github.com/sharkdp/hyperfine
+description: A command-line benchmarking tool
+
+environments:
+  macos-home:
+    install: brew install hyperfine
+    check: command -v hyperfine
+    dependencies:
+      - homebrew
+  macos-work:
+    install: brew install hyperfine
+    check: command -v hyperfine
+    dependencies:
+      - homebrew

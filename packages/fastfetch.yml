@@ -1,0 +1,19 @@
+name: fastfetch
+homepage: https://github.com/fastfetch-cli/fastfetch
+description: Like neofetch, but much faster because written mostly in C.
+
+environments:
+  arch-home:
+    install: sudo pacman -S --noconfirm --needed fastfetch
+    check: command -v fastfetch
+    dependencies: []
+  macos-home:
+    install: brew install fastfetch
+    check: command -v fastfetch
+    dependencies:
+      - homebrew
+  macos-work:
+    install: brew install fastfetch
+    check: command -v fastfetch
+    dependencies:
+      - homebrew

@@ -1,0 +1,15 @@
+name: fontconfig
+homepage: https://wiki.freedesktop.org/www/Software/fontconfig/
+description: XML-based font configuration API for X Windows
+
+environments:
+  macos-work:
+    install: brew install fontconfig
+    check: command -v fc-list
+    dependencies:
+      - homebrew
+  macos-home:
+    install: brew install fontconfig
+    check: command -v fc-list
+    dependencies:
+      - homebrew

@@ -1,0 +1,15 @@
+name: express-vpn
+homepage: https://www.expressvpn.works/
+description: VPN client for secure internet access and private browsing
+
+environments:
+  macos-work:
+    install: brew install --cask expressvpn
+    check: brew list --cask expressvpn
+    dependencies:
+      - homebrew
+  macos-home:
+    install: brew install --cask expressvpn
+    check: brew list --cask expressvpn
+    dependencies:
+      - homebrew

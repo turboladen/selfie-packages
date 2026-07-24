@@ -1,0 +1,19 @@
+name: eza
+homepage: https://github.com/eza-community/eza
+description: A modern, maintained replacement for ls
+
+environments:
+  arch-home:
+    install: sudo pacman -S --noconfirm --needed eza
+    check: command -v eza
+    dependencies: []
+  macos-home:
+    install: brew install eza
+    check: command -v eza
+    dependencies:
+      - homebrew
+  macos-work:
+    install: brew install eza
+    check: command -v eza
+    dependencies:
+      - homebrew

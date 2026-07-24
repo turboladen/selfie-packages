@@ -1,0 +1,15 @@
+name: fish-gitnow
+homepage: https://github.com/joseluisq/gitnow
+description: Speed up your Git workflow
+
+environments:
+  macos-home:
+    install: fish -c "fisher install joseluisq/gitnow"
+    check: ls ~/.config/fish/conf.d/gitnow.fish &> /dev/null
+    dependencies:
+      - fish-fisher
+  macos-work:
+    install: fish -c "fisher install joseluisq/gitnow"
+    check: ls ~/.config/fish/conf.d/gitnow.fish &> /dev/null
+    dependencies:
+      - fish-fisher

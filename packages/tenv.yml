@@ -1,0 +1,13 @@
+---
+name: tenv
+version: "0.1.0"
+homepage: https://tofuutils.github.io/tenv/
+description: |
+  OpenTofu / Terraform / Terragrunt / Terramate / Atmos version manager
+
+environments:
+  macos-work:
+    install: brew install tenv
+    check: command -v tenv
+    dependencies:
+      - homebrew

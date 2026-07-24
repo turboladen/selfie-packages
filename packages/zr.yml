@@ -1,0 +1,14 @@
+name: zr
+homepage: https://github.com/jedahan/zr.git
+description: quick, simple zsh package manager
+environments:
+  macos-home:
+    install: cargo binstall --no-confirm zr
+    check: command -v zr
+    dependencies:
+    - cargo-binstall
+  macos-work:
+    install: cargo binstall --no-confirm zr
+    check: command -v zr
+    dependencies:
+    - cargo-binstall

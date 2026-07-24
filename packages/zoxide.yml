@@ -1,0 +1,26 @@
+name: zoxide
+homepage: https://github.com/ajeetdsouza/zoxide
+description: Shell extension to navigate your filesystem faster
+environments:
+  macos-home:
+    install: |
+      set -e
+      brew install zoxide
+      echo "zoxide init fish | source" >> ~/.config/fish/conf.d/zoxide.fish
+    check: |
+      set -e
+      command -v zoxide
+      ls ~/.config/fish/conf.d/zoxide.fish &> /dev/null
+    dependencies:
+    - homebrew
+  macos-work:
+    install: |
+      set -e
+      brew install zoxide
+      echo "zoxide init fish | source" >> ~/.config/fish/conf.d/zoxide.fish
+    check: |
+      set -e
+      command -v zoxide
+      ls ~/.config/fish/conf.d/zoxide.fish &> /dev/null
+    dependencies:
+    - homebrew

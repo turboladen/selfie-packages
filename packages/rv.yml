@@ -1,0 +1,26 @@
+name: rv
+homepage: https://github.com/spinel-coop/rv
+description: 💎💨 Next-gen very fast Ruby tooling
+environments:
+  macos-home:
+    install: |
+      set -e
+      brew install rv
+      echo 'rv shell init fish | source' >> ~/.config/fish/conf.d/rv.fish
+    check: |
+      set -e
+      command -v rv
+      ls ~/.config/fish/conf.d/rv.fish
+    dependencies:
+    - homebrew
+  macos-work:
+    install: |
+      set -e
+      brew install rv
+      echo 'rv shell init fish | source' >> ~/.config/fish/conf.d/rv.fish
+    check: |
+      set -e
+      command -v rv
+      ls ~/.config/fish/conf.d/rv.fish
+    dependencies:
+    - homebrew

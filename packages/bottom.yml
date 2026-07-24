@@ -1,0 +1,19 @@
+name: bottom
+homepage: https://clementtsang.github.io/bottom/stable/
+description: |
+  A customizable cross-platform graphical process/system monitor for the terminal
+
+  Note: I'm using the OS package manager instead of `cargo-binstall` so I don't have
+  to deal with man page installation, etc.
+
+environments:
+  macos-work:
+    install: brew install bottom
+    check: command -v btm
+    dependencies:
+      - homebrew
+  macos-home:
+    install: brew install bottom
+    check: command -v btm
+    dependencies:
+      - homebrew

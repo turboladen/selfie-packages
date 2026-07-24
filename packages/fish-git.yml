@@ -1,0 +1,15 @@
+name: fish-git
+homepage: https://github.com/jhillyerd/plugin-git
+description: Git aliases plugin for the Fish shell (similar to oh-my-zsh git)
+
+environments:
+  macos-home:
+    install: fish -c "fisher install jhillyerd/plugin-git"
+    check: ls ~/.config/fish/conf.d/git.fish &> /dev/null
+    dependencies:
+      - fish-fisher
+  macos-work:
+    install: fish -c "fisher install jhillyerd/plugin-git"
+    check: ls ~/.config/fish/conf.d/git.fish &> /dev/null
+    dependencies:
+      - fish-fisher
