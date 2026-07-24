@@ -3,15 +3,17 @@ homepage: https://ghostty.org/
 description: >-
   Ghostty is a fast, feature-rich, and cross-platform terminal emulator that uses
   platform-native UI and GPU acceleration.
-
+dotfiles:
+- source: ghostty/config
+  target: ~/.config/ghostty/config
 environments:
   macos-work:
     install: brew install --cask ghostty
     check: ls /Applications/Ghostty.app/ &> /dev/null
     dependencies:
-      - homebrew
+    - homebrew
   macos-home:
     install: brew install --cask ghostty
     check: ls /Applications/Ghostty.app/ &> /dev/null
     dependencies:
-      - homebrew
+    - homebrew

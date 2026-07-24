@@ -1,15 +1,17 @@
 name: yamllint
 homepage: https://github.com/adrienverge/yamllint
 description: A linter for YAML files.
-
+dotfiles:
+- source: yamllint/config
+  target: ~/.config/yamllint/config
 environments:
-  macos-home:
-    install: $HOME/.local/bin/uv tool install yamllint
-    check: '[ -x "$HOME/.local/bin/yamllint" ] || command -v yamllint'
-    dependencies:
-      - uv
   macos-work:
     install: $HOME/.local/bin/uv tool install yamllint
-    check: '[ -x "$HOME/.local/bin/yamllint" ] || command -v yamllint'
+    check: "[ -x \"$HOME/.local/bin/yamllint\" ] || command -v yamllint"
     dependencies:
-      - uv
+    - uv
+  macos-home:
+    install: $HOME/.local/bin/uv tool install yamllint
+    check: "[ -x \"$HOME/.local/bin/yamllint\" ] || command -v yamllint"
+    dependencies:
+    - uv

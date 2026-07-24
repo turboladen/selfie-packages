@@ -3,6 +3,9 @@ homepage: https://zed.dev
 description: >-
   Zed is a minimal code editor crafted for speed and collaboration with humans
   and AI.
+dotfiles:
+- source: zed/settings.json
+  target: ~/.config/zed/settings.json
 environments:
   macos-work:
     install: brew install --cask zed

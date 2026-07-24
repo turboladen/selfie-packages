@@ -1,0 +1,408 @@
+{
+  // ╭─────────────────────────────────────────────╮
+  // │ Editor Settings                             │
+  // ╰─────────────────────────────────────────────╯
+  "project_panel": {
+    "dock": "left"
+  },
+  "outline_panel": {
+    "dock": "left"
+  },
+  "collaboration_panel": {
+    "dock": "left"
+  },
+  "git_panel": {
+    "dock": "left"
+  },
+  "session": {
+    "trust_all_worktrees": true
+  },
+  "terminal": {
+    "font_family": "JetBrainsMono Nerd Font"
+  },
+  "auto_signature_help": false,
+  "confirm_quit": true,
+  "ssh_connections": [
+    {
+      "host": "github.com",
+      "projects": []
+    }
+  ],
+  "preferred_line_length": 80,
+  "show_wrap_guides": true,
+  "wrap_guides": [
+    80
+  ],
+  "buffer_font_size": 15,
+  "vim_mode": true,
+  // ╭─────────────────────────────────────────────╮
+  // │ UI Settings                                 │
+  // ╰─────────────────────────────────────────────╯
+  "gutter": {
+    "line_numbers": true,
+    "min_line_number_digits": 2
+  },
+  "icon_theme": {
+    "mode": "dark",
+    "light": "VSCode Icons (Light)",
+    "dark": "VSCode Icons (Light)"
+  },
+  "theme": {
+    "mode": "dark",
+    "light": "Ayu Light",
+    "dark": "Ayu Dark"
+  },
+  "toolbar": {
+    "breadcrumbs": true,
+    "code_actions": true,
+    "quick_actions": true,
+    "selections_menu": true
+  },
+  "tabs": {
+    "git_status": true
+  },
+  // ╭─────────────────────────────────────────────╮
+  // │ Language-Specific Settings                  │
+  // ╰─────────────────────────────────────────────╯
+  "languages": {
+    // Shell Languages
+    "Bash": {
+      "formatter": {
+        "external": {
+          "command": "shfmt",
+          "arguments": [
+            "-i",
+            "2",
+            "-ci",
+            "-"
+          ]
+        }
+      },
+      "format_on_save": "on"
+    },
+    "Fish": {
+      "formatter": {
+        "external": {
+          "command": "fish_indent"
+        }
+      },
+      "format_on_save": "on"
+    },
+    // Web Languages
+    "JavaScript": {
+      "formatter": {
+        "external": {
+          "command": "dprint",
+          "arguments": [
+            "fmt",
+            "--stdin",
+            "{buffer_path}"
+          ]
+        }
+      },
+      "format_on_save": "on"
+    },
+    "TypeScript": {
+      "formatter": {
+        "external": {
+          "command": "dprint",
+          "arguments": [
+            "fmt",
+            "--stdin",
+            "{buffer_path}"
+          ]
+        }
+      },
+      "format_on_save": "on"
+    },
+    "TSX": {
+      "formatter": {
+        "external": {
+          "command": "dprint",
+          "arguments": [
+            "fmt",
+            "--stdin",
+            "{buffer_path}"
+          ]
+        }
+      },
+      "format_on_save": "on"
+    },
+    // Data Languages
+    "JSON": {
+      "formatter": {
+        "external": {
+          "command": "dprint",
+          "arguments": [
+            "fmt",
+            "--stdin",
+            "{buffer_path}"
+          ]
+        }
+      },
+      "format_on_save": "on"
+    },
+    "YAML": {
+      "formatter": {
+        "external": {
+          "command": "dprint",
+          "arguments": [
+            "fmt",
+            "--stdin",
+            "{buffer_path}"
+          ]
+        }
+      },
+      "format_on_save": "on"
+    },
+    "TOML": {
+      "formatter": {
+        "external": {
+          "command": "dprint",
+          "arguments": [
+            "fmt",
+            "--stdin",
+            "{buffer_path}"
+          ]
+        }
+      },
+      "format_on_save": "on"
+    },
+    // Documentation
+    "Markdown": {
+      "show_wrap_guides": true,
+      "soft_wrap": "editor_width",
+      "inlay_hints": {
+        "enabled": false
+      },
+      "preferred_line_length": 100,
+      "formatter": {
+        "external": {
+          "command": "dprint",
+          "arguments": [
+            "fmt",
+            "--stdin",
+            "{buffer_path}"
+          ]
+        }
+      },
+      "format_on_save": "on"
+    },
+    // Programming Languages
+    "Lua": {
+      "format_on_save": "on",
+      "formatter": {
+        "external": {
+          "command": "stylua",
+          "arguments": [
+            "{buffer_path}",
+            "-"
+          ]
+        }
+      }
+    },
+    "Python": {
+      "formatter": {
+        "external": {
+          "command": "dprint",
+          "arguments": [
+            "fmt",
+            "--stdin",
+            "{buffer_path}"
+          ]
+        }
+      },
+      "format_on_save": "on"
+    },
+    // Database
+    "SQL": {
+      "formatter": {
+        "external": {
+          "command": "sqlfluff",
+          "arguments": [
+            "format",
+            "--dialect=ansi",
+            "-"
+          ]
+        }
+      },
+      "format_on_save": "on"
+    }
+  },
+  // ╭─────────────────────────────────────────────╮
+  // │ LSP Configuration                           │
+  // ╰─────────────────────────────────────────────╯
+  "lsp": {
+    // Core Programming Languages
+    "rust-analyzer": {
+      "initialization_options": {
+        "check": {
+          "command": "clippy"
+        }
+      }
+    },
+    "pyright": {
+      "settings": {
+        "python.analysis": {
+          "diagnosticMode": "workspace",
+        },
+        "python": {
+          "pythonPath": ".venv/bin/python"
+        }
+      }
+    },
+    "lua-language-server": {
+      "settings": {
+        "Lua": {
+          "runtime": {
+            "version": "LuaJIT"
+          },
+          "workspace": {
+            "checkThirdParty": false,
+            "library": []
+          },
+          "completion": {
+            "callSnippet": "Replace"
+          }
+        }
+      }
+    },
+    // Web Development
+    "typescript-language-server": {
+      "settings": {
+        "typescript": {
+          "inlayHints": {
+            "includeInlayParameterNameHints": "all",
+            "includeInlayParameterNameHintsWhenArgumentMatchesName": false,
+            "includeInlayFunctionParameterTypeHints": true,
+            "includeInlayVariableTypeHints": true,
+            "includeInlayPropertyDeclarationTypeHints": true,
+            "includeInlayFunctionLikeReturnTypeHints": true,
+            "includeInlayEnumMemberValueHints": true
+          }
+        },
+        "javascript": {
+          "inlayHints": {
+            "includeInlayParameterNameHints": "all",
+            "includeInlayParameterNameHintsWhenArgumentMatchesName": false,
+            "includeInlayFunctionParameterTypeHints": true,
+            "includeInlayVariableTypeHints": true,
+            "includeInlayPropertyDeclarationTypeHints": true,
+            "includeInlayFunctionLikeReturnTypeHints": true,
+            "includeInlayEnumMemberValueHints": true
+          }
+        }
+      }
+    },
+    // Data and Configuration Languages
+    "json-language-server": {
+      "settings": {
+        "json": {
+          "schemas": []
+        }
+      }
+    },
+    "yaml-language-server": {
+      "settings": {
+        "yaml": {
+          "schemaStore": {
+            "enable": true,
+            "url": ""
+          },
+          "schemas": {}
+        }
+      }
+    },
+    "taplo": {
+      "settings": {
+        "taplo": {
+          // Let dprint handle formatting
+          "formatting": {
+            "enabled": false
+          },
+          "schema": {
+            "enabled": true,
+            "catalogs": [
+              "https://www.schemastore.org/api/json/catalog.json"
+            ]
+          }
+        }
+      }
+    },
+    // Shell Languages
+    "bash-language-server": {
+      "settings": {
+        "bashIde": {
+          "formatting": false
+        }
+      }
+    }
+  },
+  // ╭─────────────────────────────────────────────╮
+  // │ AI and Context Servers                      │
+  // ╰─────────────────────────────────────────────╯
+  "context_servers": {
+    "google-cloud-mcp": {
+      "enabled": true,
+      "command": "node",
+      "args": [
+        "/Users/steve.loveless/Development/not_my_projects/google-cloud-mcp/dist/index.js"
+      ],
+      "env": {
+        "GOOGLE_APPLICATION_CREDENTIALS": "/Users/steve.loveless/.config/gcloud/application_default_credentials.json"
+      }
+    }
+  },
+  // ╭─────────────────────────────────────────────╮
+  // │ Agent Configuration                         │
+  // ╰─────────────────────────────────────────────╯
+  "agent": {
+    "dock": "right",
+    "tool_permissions": {
+      "default": "allow"
+    },
+    "default_profile": "write",
+    "model_parameters": [],
+    "default_model": {
+      "provider": "copilot_chat",
+      "model": "claude-sonnet-4"
+    }
+  },
+  "agent_servers": {
+    "OpenCode": {
+      "type": "custom",
+      "command": "opencode",
+      "args": ["acp"]
+    }
+  },
+  // ╭─────────────────────────────────────────────╮
+  // │ Language Models                             │
+  // ╰─────────────────────────────────────────────╯
+  "language_models": {
+    "openai": {
+      "api_url": "https://proxy.fuelix.ai",
+      "available_models": [
+        {
+          "name": "claude-4-sonnet",
+          "display_name": "Claude 4 Sonnet (FI)",
+          "max_tokens": 128000
+        },
+        {
+          "name": "claude-haiku-4-5",
+          "display_name": "Claude Haiku 4.5 (FI)",
+          "max_tokens": 128000
+        },
+        {
+          "name": "gpt-5-2025-08-07",
+          "display_name": "GPT 5 (FI)",
+          "max_tokens": 128000
+        },
+        {
+          "name": "gpt-5-chat",
+          "display_name": "GPT 5 Chat (FI)",
+          "max_tokens": 128000
+        }
+      ]
+    }
+  }
+}

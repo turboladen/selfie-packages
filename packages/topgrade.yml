@@ -16,4 +16,4 @@ environments:
 
 dotfiles:
   - source: topgrade/topgrade.toml
-    target: /Users/sloveless/.config/topgrade.toml
+    target: ~/.config/topgrade.toml
